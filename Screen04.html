@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="css/style2.css">
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
@@ -31,7 +32,7 @@
             </header>
         </div>
 			
-		<div class="main-container">
+		<div class="main-container" style="height:100%">
 			<section class="tabs">
 	            <input id="tab-1" type="radio" name="radio-set" class="tab-selector-1" checked="checked" />
 		        <label for="tab-1" class="tab-label-1">棟</label>
@@ -49,7 +50,7 @@
 			
 		        <div class="content">
 			        <div class="content-1">
-						<table class="roundtable"> 
+						<table id="mainTable" class="roundtable"> 
 							<tr>
 								<td style="width:20%">加賀屋</td>
 								<td style="width:20%">者亭</td>
@@ -106,19 +107,146 @@
 								<td></td>
 							</tr>
 						</table>
-				    </div>
-		        </div>
+				    </div> <!--content-1-->
+					
+					<div class="content-2">
+						<table id="pantryTable" class="roundtable"> 
+							<tr>
+								<td style="width:100%">
+									<table style="border:0px">
+										<tr>
+											<td>12階</td>
+											<td>6部屋</td>
+											<td>3組</td>
+											<td>16名</td>
+										</tr>
+										
+										<tr>
+											<td colspan="4">明日香</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							
+							<tr>
+								<td style="width:100%">
+									<table style="border:0px">
+										<tr>
+											<td>11階</td>
+											<td>6部屋</td>
+											<td>1組</td>
+											<td>24名</td>
+										</tr>
+										
+										<tr>
+											<td colspan="4">蝶子</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							
+							<tr>
+								<td style="width:100%">
+									<table style="border:0px">
+										<tr>
+											<td>10階</td>
+											<td>6部屋</td>
+											<td>1組</td>
+											<td>24名</td>
+										</tr>
+										
+										<tr>
+											<td colspan="4">大輔</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							
+							<tr>
+								<td style="width:100%">
+									<table style="border:0px">
+										<tr>
+											<td>9階</td>
+											<td>6部屋</td>
+											<td>3組</td>
+											<td>24名</td>
+										</tr>
+										
+										<tr>
+											<td colspan="4">遥菜</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							
+							<tr>
+								<td style="width:100%">
+									<table style="border:0px">
+										<tr>
+											<td>8階</td>
+											<td>6部屋</td>
+											<td>5組</td>
+											<td>16名</td>
+										</tr>
+										
+										<tr>
+											<td colspan="4">秀吉</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							
+							<tr>
+								<td style="width:100%">
+									<table style="border:0px">
+										<tr>
+											<td>7階</td>
+											<td>6部屋</td>
+											<td>3組</td>
+											<td>22名</td>
+										</tr>
+										
+										<tr>
+											<td colspan="4">和花</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							
+							<tr>
+								<td style="width:100%">
+									<table style="border:0px">
+										<tr>
+											<td>6階</td>
+											<td>6部屋</td>
+											<td>3組</td>
+											<td>16名</td>
+										</tr>
+										
+										<tr>
+											<td colspan="4">博斗</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+				    </div> <!--content-2-->
+		        </div> <!--content-->
+				
+				<div class="bottomDiv">
+					<button class="redbutton">部屋</button>
+					<button class="button">宿泊</button>
+					<button class="button">手配</button>
+					<button class="button">ピーク</button>
+					<button class="button">インジケータ</button>
+				</div>
 			</section>
 						
 		</div>
 		
 		<div class="footer-container">
             <footer class="wrapper">
-                <button class="redbutton">部屋</button>
-				<button class="button">宿泊</button>
-				<button class="button">手配</button>
-				<button class="button">ピーク</button>
-				<button class="button">インジケータ</button>
+                
             </footer>
         </div>
 
@@ -127,5 +255,14 @@
 
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+	
+		<script>
+			$(document).ready(function(){
+				$('#mainTable tr').click(function() {
+					$('#tab-2').trigger('click');   
+				});
+			});
+		</script>
+		
     </body>
 </html>
