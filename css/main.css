@@ -191,12 +191,23 @@ nav a:hover {
     text-decoration: none;
 }
 .date-text {
-    font-size: 12px;
-    text-align: right;
+    font-size: 13px;
+    /*text-align: right;
     text-decoration: underline;
     padding-right: 10px;
+    line-height: 15px;*/
 }
 
+.date-text::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 1em;
+  width: 95%;
+  border-bottom: 1px solid;
+  margin-top: 6px;
+}
 /* ==========================================================================
    Media Queries
    ========================================================================== */
