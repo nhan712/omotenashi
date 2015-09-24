@@ -61,8 +61,14 @@ body {
 }
 
 .wrapper {
-    width: 90%;
-    margin: 0 5%;
+    /*width: 90%;
+    margin: 0 5%;*/
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+  padding-top: 80px;
 }
 
 /* ===================
@@ -154,26 +160,6 @@ nav a:hover {
    Author's custom styles
    ========================================================================== */
 
-.container {
-    margin-left: auto;
-    margin-right: auto;
-    height: 100%;
-}
-@media (min-width:768px) {
-    .container {
-        width: 750px;
-    }
-}
-@media (min-width:992px) {
-    .container {
-        width: 970px;
-    }
-}
-@media (min-width:1200px) {
-    .container {
-        width: 1170px;
-    }
-}
 .splash-screen-info {
     border: 1px solid #00EBEB;
     height: auto;
@@ -192,22 +178,9 @@ nav a:hover {
 }
 .date-text {
     font-size: 13px;
-    /*text-align: right;
-    text-decoration: underline;
-    padding-right: 10px;
-    line-height: 15px;*/
+    color: #333;
 }
 
-.date-text::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  display: inline-block;
-  height: 1em;
-  width: 95%;
-  border-bottom: 1px solid;
-  margin-top: 6px;
-}
 /* ==========================================================================
    Media Queries
    ========================================================================== */
@@ -218,8 +191,8 @@ nav a:hover {
    =============== */
 
     .wrapper {
-        width: 1026px; /* 1140px - 10% for margins */
-        margin: 0 auto;
+        /*width: 1026px;*/ /* 1140px - 10% for margins */
+        /*margin: 0 auto;*/
     }
 
     .splash-screen-info {
@@ -317,6 +290,9 @@ nav a:hover {
 @media only screen and (max-width: 360px) {
     .splash-screen-info {
         margin: 5% 10%;
+    }
+    .date-text {
+      font-size: 11px;
     }
 }
 

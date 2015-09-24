@@ -21,23 +21,24 @@ body {
   box-sizing: border-box;
 }
 
-.wrapper-login {
+/*.wrapper-login {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   min-height: 100%;
   padding-top: 20px;
-}
+}*/
 
 .login {
   border-radius: 2px 2px 5px 5px;
   padding: 10px 20px 110px;
-  width: 90%;
-  max-width: 320px;
+  /*width: 90%;*/
+  /*max-width: 320px;*/
   background: #ffffff;
-  position: relative;
+  /*position: relative;*/
   border: 1px solid #DDD;
+  margin: 0;
 }
 .login.loading button {
   max-height: 100%;
@@ -161,4 +162,15 @@ footer a, footer a:link {
 }
 #staff-name {
     text-align: center;
+    color: #333;
+}
+.date-text::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 1em;
+  width: 95%;
+  border-bottom: 1px solid;
+  margin-top: 6px;
 }
