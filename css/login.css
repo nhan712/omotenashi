@@ -43,9 +43,15 @@ input[type="password"].valid, input[type="password"]:focus.valid {
   border-bottom: 1px solid #42A5F5 !important;
   box-shadow: 0 1px 0 0 #42A5F5 !important;
 }
-.picker__today {
+/*.picker__today {
   padding: 0 1rem;
 }
 .btn-flat {
   padding: 0 1rem;
+}*/
+.picker__footer {
+  text-align: center;
+}
+p:hover, p:focus {
+  outline: none;
 }

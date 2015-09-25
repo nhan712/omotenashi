@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title></title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Add the stylings *after* the pickadate theme files -->
-   
+    <link rel="touch-startup-image" href="img/splash-screen.jpg" />
     <!-- Loading Material UI -->
     <link href="css/materialize.css" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.min.css">
@@ -82,7 +82,18 @@
         }
       }
 
-      var $input = $('#datepicker').pickadate();
+      var $input = $('#datepicker').pickadate({
+        monthsFull: [ '1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月' ],
+        monthsShort: [ '1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月' ],
+        weekdaysFull: [ '日曜日', '月曜日', '火曜日', '水曜日', '木曜日', '金曜日', '土曜日' ],
+        weekdaysShort: [ '日', '月', '火', '水', '木', '金', '土' ],
+        today: '今日',
+        clear: '消去',
+        close: '閉じ',
+        firstDay: 1,
+        format: 'yyyy/mm/dd',
+        formatSubmit: 'yyyy/mm/dd'
+      });
       var picker = $input.data('pickadate');
       $('.date-text').click( function( e ) {
           // stop the click from bubbling
@@ -90,6 +101,10 @@
           // prevent the default click action
           e.preventDefault();
           // open the date picker
+          var weekdaysShort = [ '日', '月', '火', '水', '木', '金', '土' ];
+          $(".picker__weekday").each(function(index){
+            $(this).html(weekdaysShort[index])
+          });
           picker.open();
       });
       $(document).on('click', function() {
