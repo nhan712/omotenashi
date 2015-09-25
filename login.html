@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/login.css">
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
   </head>
   <body class="login-background">
@@ -46,28 +45,23 @@
             </div>
             <!-- <div style="position: absolute; right: 15px; bottom: 40px; cursor: pointer;"> -->
             <p class="date-text"></p>
-
+            <div id="datepicker"></div>
             <!-- </div> -->
           </form>
           </div>
           <div class="col l3 s1"></div>
         </div>
-        <div class="row">
-           <div id="datepicker"></div>
-        </div>
+        
       </div>
       <!-- <div class="col-md-4"></div> -->
     </div>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
-    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <!-- Add the language *after* the pickadate script files -->
     <script src="js/picker.js"></script>
     <script src="js/picker.date.js"></script>
-    <script src="js/picker.time.js"></script>
-    <script src="js/ja_JP.js"></script>
-    <script src="http://jquery-ui.googlecode.com/svn/tags/1.8.23/ui/i18n/jquery.ui.datepicker-ja.js"></script>
+    <script src="js/legacy.js"></script>
     <script src="js/vendor/moment-with-locales.js"></script>
     <script src="js/materialize.min.js"></script>
     <script src="js/plugins.js"></script>
@@ -88,29 +82,27 @@
         }
       }
 
-      // $.datepicker.setDefaults( $.datepicker.regional[ "ja" ] );
-      // $("#datepicker").hide();
-      // $(".date-text").click(function(){
-      //   $("#datepicker").toggle();
-      // }); 
-      // $("#datepicker").datepicker({ 
-      //   onSelect: function(value, date) { 
-      //     var ymd = moment(value).format('ll');
-      //     var day = "（"+moment(value).format('dd')+"）";
-      //     $(".date-text").text(ymd+day);
-      //     $("#datepicker").hide(); 
-      //   } 
-      // });
-      //var $input = $('#datepicker').pickadate()
-      // Use the picker object directly.
-      //var picker = $input.pickadate('picker')
-      // $('.date-text').click(function() {
-        
-      // }) 
-      // $(document).on('click', function() {
-      //   //picker.close()
-      // })
-      $('#staff-id').pickadate()
+      var $input = $('#datepicker').pickadate();
+      var picker = $input.data('pickadate');
+      $('.date-text').click( function( e ) {
+          // stop the click from bubbling
+          e.stopPropagation();
+          // prevent the default click action
+          e.preventDefault();
+          // open the date picker
+          picker.open();
+      });
+      $(document).on('click', function() {
+        picker.close()
+      });
+      picker.on('close', function(){
+        var val = picker.get();
+        if (val != "") {
+          var ymd = moment(val).format('ll');
+          var day = "（"+moment(val).format('dd')+"）";
+          $(".date-text").text(ymd+day);
+        }
+      });
     </script>
   </body>
 
