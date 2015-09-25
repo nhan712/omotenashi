@@ -60,15 +60,9 @@ body {
     font: 16px/26px Helvetica, Helvetica Neue, Arial;
 }
 
-.wrapper {
-    /*width: 90%;
-    margin: 0 5%;*/
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 100%;
-  padding-top: 80px;
+a:hover, a:focus, .btn:hover, .btn:focus {
+  color: white;
+  text-decoration: none;
 }
 
 /* ===================
@@ -88,10 +82,6 @@ body {
 .footer-container,
 .main aside {
     background: #f16529;
-}
-
-.title {
-    color: white;
 }
 
 /* ==============
@@ -288,12 +278,9 @@ nav a:hover {
     }
 }
 @media only screen and (max-width: 360px) {
-    .splash-screen-info {
-        margin: 5% 10%;
-    }
-    .date-text {
-      font-size: 11px;
-    }
+  .splash-screen-info {
+      margin: 5% 10%;
+  }   
 }
 
 
