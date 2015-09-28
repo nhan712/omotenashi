@@ -22,7 +22,7 @@
         <div class="row">
           <div class="col l3 s1"></div>
           <div class="col l6 s10">
-          <form class="login" action="screen03.html" method="POST">
+          <form class="login">
             <p class="title">Log in</p>
             <div class="row">
               <div class="input-field col s12">
@@ -38,7 +38,7 @@
             </div>
             <p id="staff-name" class="center-align"></p>
             <div class="login-btn">
-              <button class="waves-effect waves-light btn blue lighten-1">OK</button>
+              <a class="waves-effect waves-light btn blue lighten-1">OK</a>
             </div>
             <!-- <div style="position: absolute; right: 15px; bottom: 40px; cursor: pointer;"> -->
             <p class="date-text"></p>
@@ -106,6 +106,10 @@
           $(".date-text").text(ymd+day);
         }
       });
+      $('.btn').click(function() {
+        var url = "screen03.html?dhd=" + $('.date-text').text();
+        location.href = url
+      })
     </script>
   </body>
 
