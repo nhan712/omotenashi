@@ -6115,7 +6115,9 @@ a.waves-effect .waves-ripple {
   line-height: 3rem;
   padding: 0 1rem;
   background-color: #fff;
-  border-bottom: 1px solid #ddd; }
+  border-bottom: 1px solid #ddd; 
+  font-size:18px;
+  }
   .collapsible-header i {
     width: 2rem;
     font-size: 1.6rem;
