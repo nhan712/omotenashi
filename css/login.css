@@ -52,6 +52,9 @@ input[type="password"].valid, input[type="password"]:focus.valid {
 .picker__footer {
   text-align: center;
 }
+.picker__frame {
+  top: 0 !important;
+}
 p:hover, p:focus {
   outline: none;
 }

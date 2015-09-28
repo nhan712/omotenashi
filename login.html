@@ -6,9 +6,6 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- Add the stylings *after* the pickadate theme files -->
-    <link rel="touch-startup-image" href="img/splash-screen.jpg" />
     <!-- Loading Material UI -->
     <link href="css/materialize.css" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.min.css">
@@ -29,7 +26,7 @@
             <p class="title">Log in</p>
             <div class="row">
               <div class="input-field col s12">
-                <input id="staff-id" type="text" onblur="getStaffName();">
+                <input id="staff-id" type="text">
                 <label for="staff-id" style="font-weight: normal;">Staff ID</label>
               </div>
             </div>
@@ -55,13 +52,9 @@
       </div>
       <!-- <div class="col-md-4"></div> -->
     </div>
-
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
-    <!-- Add the language *after* the pickadate script files -->
-    <script src="js/picker.js"></script>
-    <script src="js/picker.date.js"></script>
-    <script src="js/legacy.js"></script>
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script> -->
+    <script src="js/vendor/jquery-1.11.2.js"></script>
     <script src="js/vendor/moment-with-locales.js"></script>
     <script src="js/materialize.min.js"></script>
     <script src="js/plugins.js"></script>
@@ -71,8 +64,7 @@
       var ymd = moment().format('ll');
       var day = "（"+moment().format('dd')+"）";
       $(".date-text").text(ymd+day);
-
-      function getStaffName() {
+      $('#staff-id') .focusout(function () {
         if ($('#staff-id').val() == '123') {
           $('#staff-name').text('nhanvc');
           $('#password').attr('readonly', false);
@@ -80,19 +72,19 @@
           $('#staff-name').text('');
           $('#password').attr('readonly', true);
         }
-      }
-
+      });
       var $input = $('#datepicker').pickadate({
         monthsFull: [ '1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月' ],
         monthsShort: [ '1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月' ],
         weekdaysFull: [ '日曜日', '月曜日', '火曜日', '水曜日', '木曜日', '金曜日', '土曜日' ],
         weekdaysShort: [ '日', '月', '火', '水', '木', '金', '土' ],
+        weekdaysLetter: [ '日', '月', '火', '水', '木', '金', '土' ],
         today: '今日',
         clear: '消去',
         close: '閉じ',
         firstDay: 1,
         format: 'yyyy/mm/dd',
-        formatSubmit: 'yyyy/mm/dd'
+        formatSubmit: 'yyyy/mm/dd',
       });
       var picker = $input.data('pickadate');
       $('.date-text').click( function( e ) {
@@ -101,10 +93,6 @@
           // prevent the default click action
           e.preventDefault();
           // open the date picker
-          var weekdaysShort = [ '日', '月', '火', '水', '木', '金', '土' ];
-          $(".picker__weekday").each(function(index){
-            $(this).html(weekdaysShort[index])
-          });
           picker.open();
       });
       $(document).on('click', function() {
