@@ -1,0 +1,22 @@
+td.smallRow {
+  position: relative;
+  height: 2vh !important;
+  padding : 5px;
+  overflow: hidden;
+}
+
+.multiTable table tr td {
+	position: relative;
+	padding : 5px;
+	overflow: hidden;
+}
+
+.multiTable tbody tr td {
+	position: relative;
+	padding : 5px;
+	overflow: hidden;
+}
+
+td .col25 {
+	width : 25%;
+}

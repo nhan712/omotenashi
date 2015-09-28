@@ -5253,7 +5253,7 @@ nav ul a span.badge {
 
 nav {
   color: #fff;
-  background-color: #ee6e73;
+  background-color: #42A5F5;
   width: 100%;
   height: 56px;
   line-height: 56px; }
@@ -5994,6 +5994,9 @@ button.btn-floating {
     background-color: rgba(76, 175, 80, 0.7); }
   .waves-effect.waves-teal .waves-ripple {
     background-color: rgba(0, 150, 136, 0.7); }
+	.waves-effect.waves-blue .waves-ripple {
+    background-color: rgba(66, 165, 245, 0.7); }
+	
 
 .waves-notransition {
   -webkit-transition: none !important;
@@ -8794,3 +8797,7 @@ body.parallax-demo footer {
 
 #twitter-widget-0 {
   width: 190px !important; }
+
+liul li div ul li a {
+	font-size:20px;
+}

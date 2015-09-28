@@ -16,6 +16,7 @@
     <meta name="theme-color" content="#EE6E73">
     <!-- CSS-->
     <link href="css/prism.css" rel="stylesheet">
+	<link href="css/Screen04.css" rel="stylesheet">
     <link href="css/ghpages-materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
     <link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -23,7 +24,7 @@
   </head>
   <body>
     <header>
-		<nav class="top-nav"　style="height:52px">
+		<nav class="top-nav">
 			<div class="container">
 				<div class="nav-wrapper"><a class="page-title">部屋情報</a></div>
 			</div>
@@ -45,18 +46,19 @@
 			<li class="no-padding">
 				<ul class="collapsible collapsible-accordion">
 		  
-					<li class="bold"><a class="collapsible-header  waves-effect waves-teal">部屋情報</a>
+					<li class="bold">
+						<a class="collapsible-header waves-effect waves-blue">部屋情報</a>
 						<div class="collapsible-body">
 							<ul>
-								<li><a href="Screen04.html">棟</a></li>
-								<li><a href="Screen04.html">ﾊﾟﾝﾄﾘｰ</a></li>
-								<li><a href="Screen04.html">部屋</a></li>
-								<li><a href="Screen04.html">詳細</a></li>
+								<li><div class="collapsible-header"><i class="material-icons">business</i><a href="Screen04.html">棟</a></div></li>
+								<li><div class="collapsible-header"><i class="material-icons">dns</i><a href="Screen04.html?tab=pantry">ﾊﾟﾝﾄﾘｰ</a></div></li>
+								<li><div class="collapsible-header"><i class="material-icons">store</i><a href="Screen04.html?tab=room">部屋</a></div></li>
+								<li><div class="collapsible-header"><i class="material-icons">view_headline</i><a href="Screen04.html?tab=detail">詳細</a></div></li>
 							</ul>
 						</div>
 					</li>
 			
-					<li class="bold"><a class="collapsible-header  waves-effect waves-teal">宿泊客検索</a>
+					<li class="bold"><a class="collapsible-header  waves-effect waves-blue">宿泊客検索</a>
 						<div class="collapsible-body">
 							<ul>
 								<li><a href="Screen08.html">あ</a></li>
@@ -73,7 +75,7 @@
 						</div>
 					</li>
 			
-					<li class="bold"><a class="collapsible-header  waves-effect waves-teal">手配登録</a>
+					<li class="bold"><a class="collapsible-header  waves-effect waves-blue">手配登録</a>
 						<div class="collapsible-body">
 							<ul>
 								<li><a href="http://intl.kagaya.jp/">配達センター</a></li>
@@ -84,18 +86,18 @@
 						</div>
 					</li>
 			
-					<li class="bold"><a class="collapsible-header  waves-effect waves-teal">ピーク時間情報</a>
+					<li class="bold"><a class="collapsible-header  waves-effect waves-blue">ピーク時間情報</a>
 						<div class="collapsible-body">
 							<ul>
-								<li><a href="collapsible.html">IN</a></li>
-								<li><a href="dialogs.html">夕食</a></li>
-								<li><a href="dropdown.html">朝食</a></li>
-								<li><a href="media.html">OUT</a></li>
+								<li><a href="Screen14.html">IN</a></li>
+								<li><a href="Screen14.html">夕食</a></li>
+								<li><a href="Screen14.html">朝食</a></li>
+								<li><a href="Screen14.html">OUT</a></li>
 							</ul>
 						</div>
 					</li>
 			
-					<li class="bold"><a class="collapsible-header  waves-effect waves-teal">インジケータ</a>
+					<li class="bold"><a class="collapsible-header  waves-effect waves-blue">インジケータ</a>
 						<div class="collapsible-body">
 							<ul>
 								<li><a href="Screen15.html">棟</a></li>
@@ -117,7 +119,7 @@
 						<ul class="collapsible collapsible-accordion" data-collapsible="accordion">
 							<li>
 								<div class="collapsible-header" id="hotelDiv">
-									<i class="material-icons">filter_drama</i>棟
+									<i class="material-icons">business</i>棟
 								</div>
 								
 								<div class="collapsible-body">
@@ -194,27 +196,27 @@
 							</li>
           
 							<li>
-								<div class="collapsible-header" id="pantryDiv"><i class="material-icons">place</i>ﾊﾟﾝﾄﾘｰ</div>
+								<div class="collapsible-header" id="pantryDiv"><i class="material-icons">dns</i>ﾊﾟﾝﾄﾘｰ</div>
 								<div class="collapsible-body">
-									<table id="pantryTable" class="bordered highlight"> 
+									<table id="pantryTable" class="bordered highlight multiTable"> 
 										<thead>
 											<tr class="light-blue lighten-4">
-												<th data-field="id">階</th>
-												<th data-field="name">部屋</th>
-												<th data-field="price">組</th>
-												<th data-field="price">名</th>
+												<th data-field="id" style="width:25%">階</th>
+												<th data-field="name" style="width:25%">部屋</th>
+												<th data-field="price" style="width:25%">組</th>
+												<th data-field="price" style="width:25%">名</th>
 											</tr>
 										</thead>
 										
 										<tbody>
 											<tr>
-												<td style="width:100%">
-													<table style="border:0px">
+												<td colspan="4">
+													<table>
 														<tr>
-															<td>12階</td>
-															<td>6部屋</td>
-															<td>3組</td>
-															<td>16名</td>
+															<td class="col25">12階</td>
+															<td class="col25">6部屋</td>
+															<td class="col25">3組</td>
+															<td class="col25">16名</td>
 														</tr>
 														
 														<tr>
@@ -225,13 +227,13 @@
 											</tr>
 											
 											<tr>
-												<td style="width:100%">
-													<table style="border:0px">
+												<td colspan="4">
+													<table>
 														<tr>
-															<td>11階</td>
-															<td>6部屋</td>
-															<td>1組</td>
-															<td>24名</td>
+															<td class="col25">11階</td>
+															<td class="col25">6部屋</td>
+															<td class="col25">1組</td>
+															<td class="col25">24名</td>
 														</tr>
 														
 														<tr>
@@ -242,13 +244,13 @@
 											</tr>
 											
 											<tr>
-												<td style="width:100%">
-													<table style="border:0px">
+												<td colspan="4">
+													<table>
 														<tr>
-															<td>10階</td>
-															<td>6部屋</td>
-															<td>1組</td>
-															<td>24名</td>
+															<td class="col25">10階</td>
+															<td class="col25">6部屋</td>
+															<td class="col25">1組</td>
+															<td class="col25">24名</td>
 														</tr>
 														
 														<tr>
@@ -259,13 +261,13 @@
 											</tr>
 											
 											<tr>
-												<td style="width:100%">
-													<table style="border:0px">
+												<td colspan="4">
+													<table>
 														<tr>
-															<td>9階</td>
-															<td>6部屋</td>
-															<td>3組</td>
-															<td>24名</td>
+															<td class="col25">91階</td>
+															<td class="col25">6部屋</td>
+															<td class="col25">3組</td>
+															<td class="col25">24名</td>
 														</tr>
 														
 														<tr>
@@ -276,13 +278,13 @@
 											</tr>
 											
 											<tr>
-												<td style="width:100%">
+												<td colspan="4">
 													<table style="border:0px">
 														<tr>
-															<td>8階</td>
-															<td>6部屋</td>
-															<td>5組</td>
-															<td>16名</td>
+															<td class="col25">8階</td>
+															<td class="col25">6部屋</td>
+															<td class="col25">5組</td>
+															<td class="col25">16名</td>
 														</tr>
 														
 														<tr>
@@ -293,13 +295,13 @@
 											</tr>
 											
 											<tr>
-												<td style="width:100%">
+												<td colspan="4">
 													<table style="border:0px">
 														<tr>
-															<td>7階</td>
-															<td>6部屋</td>
-															<td>3組</td>
-															<td>22名</td>
+															<td class="col25">7階</td>
+															<td class="col25">6部屋</td>
+															<td class="col25">3組</td>
+															<td class="col25">22名</td>
 														</tr>
 														
 														<tr>
@@ -310,13 +312,13 @@
 											</tr>
 											
 											<tr>
-												<td style="width:100%">
+												<td colspan="4">
 													<table style="border:0px">
 														<tr>
-															<td>6階</td>
-															<td>6部屋</td>
-															<td>3組</td>
-															<td>16名</td>
+															<td class="col25">6階</td>
+															<td class="col25">6部屋</td>
+															<td class="col25">3組</td>
+															<td class="col25">16名</td>
 														</tr>
 														
 														<tr>
@@ -331,13 +333,144 @@
 							</li>
 						  
 							<li>
-								<div class="collapsible-header"><i class="material-icons">whatshot</i>部屋</div>
+								<div class="collapsible-header" id="roomDiv"><i class="material-icons">store</i>部屋</div>
 								<div class="collapsible-body">
+									<table id="pantryTable" class="bordered highlight multiTable"> 
+										<thead>
+											<tr class="light-blue lighten-4">
+												<th data-field="id" style="width:25%">階</th>
+												<th data-field="name" style="width:25%">部屋</th>
+												<th data-field="price" style="width:25%">組</th>
+												<th data-field="price" style="width:25%">名</th>
+											</tr>
+										</thead>
+										
+										<tbody>
+											<tr>
+												<td colspan="4">
+													<table>
+														<tr>
+															<td class="col25">12階</td>
+															<td class="col25">6部屋</td>
+															<td class="col25">3組</td>
+															<td class="col25">16名</td>
+														</tr>
+														
+														<tr>
+															<td colspan="4">明日香</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+											
+											<tr>
+												<td colspan="4">
+													<table>
+														<tr>
+															<td class="col25">11階</td>
+															<td class="col25">6部屋</td>
+															<td class="col25">1組</td>
+															<td class="col25">24名</td>
+														</tr>
+														
+														<tr>
+															<td colspan="4">蝶子</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+											
+											<tr>
+												<td colspan="4">
+													<table>
+														<tr>
+															<td class="col25">10階</td>
+															<td class="col25">6部屋</td>
+															<td class="col25">1組</td>
+															<td class="col25">24名</td>
+														</tr>
+														
+														<tr>
+															<td colspan="4">大輔</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+											
+											<tr>
+												<td colspan="4">
+													<table>
+														<tr>
+															<td class="col25">91階</td>
+															<td class="col25">6部屋</td>
+															<td class="col25">3組</td>
+															<td class="col25">24名</td>
+														</tr>
+														
+														<tr>
+															<td colspan="4">遥菜</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+											
+											<tr>
+												<td colspan="4">
+													<table style="border:0px">
+														<tr>
+															<td class="col25">8階</td>
+															<td class="col25">6部屋</td>
+															<td class="col25">5組</td>
+															<td class="col25">16名</td>
+														</tr>
+														
+														<tr>
+															<td colspan="4">秀吉</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+											
+											<tr>
+												<td colspan="4">
+													<table style="border:0px">
+														<tr>
+															<td class="col25">7階</td>
+															<td class="col25">6部屋</td>
+															<td class="col25">3組</td>
+															<td class="col25">22名</td>
+														</tr>
+														
+														<tr>
+															<td colspan="4">和花</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+											
+											<tr>
+												<td colspan="4">
+													<table style="border:0px">
+														<tr>
+															<td class="col25">6階</td>
+															<td class="col25">6部屋</td>
+															<td class="col25">3組</td>
+															<td class="col25">16名</td>
+														</tr>
+														
+														<tr>
+															<td colspan="4">博斗</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
 								</div>
 							</li>
 						  
 							<li>
-								<div class="collapsible-header"><i class="material-icons">whatshot</i>詳細</div>
+								<div class="collapsible-header" id="detailDiv"><i class="material-icons">view_headline</i>詳細</div>
 								<div class="collapsible-body">
 								</div>
 							</li>
@@ -358,8 +491,35 @@
     <script src="js/init.js"></script>
         
 	<script>
-		$(document).ready(function(){
-			$('#hotelDiv').trigger('click');
+		var getUrlParameter = function getUrlParameter(sParam) {
+			var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+				sURLVariables = sPageURL.split('&'),
+				sParameterName,
+				i;
+
+			for (i = 0; i < sURLVariables.length; i++) {
+				sParameterName = sURLVariables[i].split('=');
+
+				if (sParameterName[0] === sParam) {
+					return sParameterName[1] === undefined ? true : sParameterName[1];
+				}
+			}
+		};
+	
+		$(document).ready(function() {
+			var tab = getUrlParameter('tab');
+						
+			if (tab == "hotel") {
+				$('#hotelDiv').trigger('click'); 
+			} else if (tab == "pantry") {
+				$('#pantryDiv').trigger('click'); 
+			} else if (tab == "room") {
+				$('#roomDiv').trigger('click'); 
+			} else if (tab == "detail") {
+				$('#detailDiv').trigger('click'); 
+			} else {
+				$('#hotelDiv').trigger('click');
+			}
 	
 			$('#hotelTable tr').click(function() {
 				$('#pantryDiv').trigger('click');   
