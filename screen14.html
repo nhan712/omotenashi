@@ -1,47 +1,169 @@
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Loading Material UI -->
-    <link href="css/materialize.css" rel="stylesheet">
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-      google.load("visualization", "1.1", {packages:["bar"]});
-      google.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Year', 'Sales', 'Expenses', 'Profit'],
-          ['2014', 1000, 400, 200],
-          ['2015', 1170, 460, 250],
-          ['2016', 660, 1120, 300],
-          ['2017', 1030, 540, 350]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="description" content="Materialize is a modern responsive CSS framework based on Material Design by Google. ">
+  <title>Collapsible - Materialize</title>
+  <!-- Favicons-->
+  <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png">
+  <meta name="msapplication-TileColor" content="#FFFFFF">
+  <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+  <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
+  <!--  Android 5 Chrome Color-->
+  <meta name="theme-color" content="#EE6E73">
+  <!-- CSS-->
+  <link href="css/prism.css" rel="stylesheet">
+  <link href="css/screen14.css" rel="stylesheet">
+  <link href="css/ghpages-materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
+  <link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type="text/javascript">
+    google.load("visualization", "1.1", {packages:["bar"]});
+    google.setOnLoadCallback(drawChart);
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['Year', 'Sales', 'Expenses', 'Profit'],
+        ['2014', 1000, 400, 200],
+        ['2015', 1170, 460, 250],
+        ['2016', 660, 1120, 300],
+        ['2017', 1030, 540, 350]
         ]);
 
-        var options = {
-          chart: {
-            title: 'Company Performance',
-            subtitle: 'Sales, Expenses, and Profit: 2014-2017',
-          },
+      var options = {
+        chart: {
+          title: 'Company Performance',
+          subtitle: 'Sales, Expenses, and Profit: 2014-2017',
+        },
           bars: 'horizontal' // Required for Material Bar Charts.
         };
 
         var chart = new google.charts.Bar(document.getElementById('barchart_material'));
 
         chart.draw(data, options);
-      }
+    }
+   
     </script>
   </head>
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="col s12 m9 l10">
-          <div id="barchart_material"></div>
+    <header>
+      <nav class="top-nav">
+        <div class="container">
+          <div class="nav-wrapper"><a class="page-title">部屋情報</a></div>
         </div>
-      </div>
-    </div>
-    
-  </body>
-</html>
+      </nav>
+
+      <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav waves-effect waves-light circle hide-on-large-only"><i class="mdi-navigation-menu"></i></a></div>
+      <ul id="nav-mobile" class="side-nav fixed">
+        <li class="logo"><a id="logo-container" href="http://materializecss.com/" class="brand-logo">
+          <object id="front-page-logo" type="image/svg+xml" data="res/materialize.svg">Your browser does not support SVG</object></a></li>
+
+          <li class="no-padding">
+            <ul class="collapsible collapsible-accordion">
+
+              <li class="bold"><a class="collapsible-header  waves-effect waves-teal">部屋情報</a>
+                <div class="collapsible-body">
+                  <ul>
+                    <li><a href="Screen04.html">棟</a></li>
+                    <li><a href="Screen04.html">ﾊﾟﾝﾄﾘｰ</a></li>
+                    <li><a href="Screen04.html">部屋</a></li>
+                    <li><a href="Screen04.html">詳細</a></li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="bold"><a class="collapsible-header  waves-effect waves-teal">宿泊客検索</a>
+                <div class="collapsible-body">
+                  <ul>
+                    <li><a href="badges.html">Badges</a></li>
+                    <li><a href="buttons.html">Buttons</a></li>
+                    <li><a href="cards.html">Cards</a></li>
+                    <li><a href="chips.html">Chips</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="footer.html">Footer</a></li>
+                    <li><a href="forms.html">Forms</a></li>
+                    <li><a href="icons.html">Icons</a></li>
+                    <li><a href="navbar.html">Navbar</a></li>
+                    <li><a href="pagination.html">Pagination</a></li>
+                    <li><a href="preloader.html">Preloader</a></li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="bold"><a class="collapsible-header  waves-effect waves-teal">手配登録</a>
+                <div class="collapsible-body">
+                  <ul>
+                    <li><a href="collapsible.html">配達センター</a></li>
+                    <li><a href="dialogs.html">調理事務所</a></li>
+                    <li><a href="dropdown.html">用度事務所</a></li>
+                    <li><a href="media.html">用度翌日</a></li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="bold"><a class="collapsible-header  waves-effect waves-teal">ピーク時間情報</a>
+                <div class="collapsible-body">
+                  <ul>
+                    <li><a href="collapsible.html">IN</a></li>
+                    <li><a href="dialogs.html">夕食</a></li>
+                    <li><a href="dropdown.html">朝食</a></li>
+                    <li><a href="media.html">OUT</a></li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="bold"><a class="collapsible-header  waves-effect waves-teal">インジケータ</a>
+                <div class="collapsible-body">
+                  <ul>
+                    <li><a href="Screen04.html">棟</a></li>
+                    <li><a href="Screen04.html">ﾊﾟﾝﾄﾘｰ</a></li>
+                    <li><a href="Screen04.html">部屋</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </li>
+
+        </ul>
+      </header>
+      <main>
+        <div class="container">
+          <div class="row">
+            <div class="col s12 m9 l10">
+              <div id="introduction" class="section scrollspy">
+                <div id="barchart_material" style="width: 100%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>    
+      <!--  Scripts-->
+      <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script>if (!window.jQuery) { document.write('<script src="bin/jquery-2.1.1.min.js"><\/script>'); }
+      </script>
+      <script src="js/jquery.timeago.min.js"></script>  
+      <script src="js/prism.js"></script>
+      <script src="bin/materialize.js"></script>
+
+      <script>
+        $(document).ready(function(){
+          $('#hotelDiv').trigger('click');
+
+          $('#hotelTable tr').click(function() {
+            $('#pantryDiv').trigger('click');   
+          });
+
+          $('#pantryTable tr').click(function() {
+            $('#tab-3').trigger('click');   
+          });
+
+          $('#roomTable tr').click(function() {
+            $('#tab-4').trigger('click');   
+          });
+        });
+      </script>
+    </body>
+    </html>

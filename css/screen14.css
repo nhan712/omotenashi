@@ -1,0 +1,8 @@
+@media only screen and (max-width: 900px) {
+  #barchart_material {height: 450px;} }
+@media only screen and (max-width: 667px) {
+  #barchart_material {height: 380px;} }
+@media only screen and (max-width: 480px) {
+  #barchart_material {height: 300px;} }
+@media only screen and (max-width: 320px) {
+  #barchart_material {height: 250px;} }
