@@ -8284,14 +8284,18 @@ nav.top-nav {
   height: 52px;
   box-shadow: none; }
   nav.top-nav a.page-title {
-    line-height: 62px;
+    line-height: 56px;
+    /*line-height: 62px;*/
     font-size: 32px; }
 
 a.button-collapse.top-nav {
   position: absolute;
   text-align: center;
-  height: 48px;
-  width: 48px;
+  height: 56px;
+  width: 56px;
+  line-height: 56px;
+  /*height: 48px;
+  width: 48px;*/
   left: 7.5%;
   top: 0;
   float: none;
