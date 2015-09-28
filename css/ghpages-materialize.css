@@ -6115,7 +6115,9 @@ a.waves-effect .waves-ripple {
   line-height: 3rem;
   padding: 0 1rem;
   background-color: #fff;
-  border-bottom: 1px solid #ddd; }
+  border-bottom: 1px solid #ddd; 
+  font-size:18px;
+  }
   .collapsible-header i {
     width: 2rem;
     font-size: 1.6rem;
@@ -8274,12 +8276,13 @@ ul.side-nav.fixed {
   height: 57px;
   margin-bottom: 32px; }
 
+<!-- modified 20150928 -->
 nav.top-nav {
-  height: 122px;
+  height: 52px;
   box-shadow: none; }
   nav.top-nav a.page-title {
-    line-height: 122px;
-    font-size: 48px; }
+    line-height: 62px;
+    font-size: 32px; }
 
 a.button-collapse.top-nav {
   position: absolute;
@@ -8304,7 +8307,7 @@ a.button-collapse.top-nav {
   nav .nav-wrapper {
     text-align: center; }
     nav .nav-wrapper a.page-title {
-      font-size: 36px; } }
+      font-size: 28px; } }
 
 @media only screen and (min-width : 993px) {
   .container {
