@@ -54,32 +54,6 @@
     box-shadow: 2px 0 2px rgba(0,0,0,0.1), -2px 0 2px rgba(0,0,0,0.1);
 }
 
-@media screen and (max-width: 400px) {
-	.tabs label {
-		width: 40px;
-	}
-	
-	.tabs input {
-		width: 80px;
-	}
-	
-	.tabs input#tab-2{
-		left: 80px;
-	}
-	.tabs input#tab-3{
-		left: 160px;
-	}
-	.tabs input#tab-4{
-		left: 240px;
-	}
-	
-	.bottomDiv {
-		overflow-x: auto;
-		width: 600px;
-		height: 80px;
-	}
-}
-
 .tabs label:after {
     content: '';
 	background: #fff;
@@ -114,7 +88,7 @@
 
 .tabs input:checked + label {
     background: #63B8EE;
-	z-index: 6;
+	<!--z-index: 6;-->
 	
     -webkit-animation: page 0.2s linear;
     -moz-animation: page 0.2s linear;
@@ -131,10 +105,9 @@
     background: #fff;
 	position: relative;
     width: 100%;
-	height: 370px;
+	height: 420px;
 	z-index: 5;
 	overflow: hidden;
-    
 }
 
 .content div {
@@ -158,10 +131,10 @@
 	transform: translateX(-250px);
 }
 
-.content-2{ 
+.content-1, .content-2, .content-3, .content-4 { 
 	overflow:auto; 
 	width: 500px;
-	height: 300px; 
+	height: 100%; 
 }
 
 .content > div {
@@ -288,7 +261,6 @@
 	border-top:1px solid #bfdffa;
 	padding:.3em 1em;
 	text-align:center;
-	width:100px;
 }
 
 .roundtable tr td:first-child
@@ -308,6 +280,50 @@
 	border-left:1px solid #bfdffa;
 	border-right:1px solid #bfdffa;
     border-radius: 0.6em;
+}
+
+td.cell-20 {
+	width : 20px;
+}
+
+td.cell-30 {
+	width : 30px;
+}
+
+td.cell-40 {
+	width : 40px;
+}
+
+td.cell-50 {
+	width : 50px;
+}
+
+td.cell-60 {
+	width : 60px;
+}
+
+td.cell-70 {
+	width : 70px;
+}
+
+td.cell-80 {
+	width : 80px;
+}
+
+td.cell-90 {
+	width : 90px;
+}
+
+td.cell-100 {
+	width : 100px;
+}
+
+td.cell-110 {
+	width : 110px;
+}
+
+td.cell-120 {
+	width : 120px;
 }
 
 .complextable tr td
@@ -335,4 +351,75 @@ div.arrow-right {
 	border-left: 5px solid #2f2f2f; /* bottom, add background color here */
 	font-size: 0;
 	line-height: 0;
+}
+
+@media screen and (max-width: 330px) {
+	.tabs label {
+		width: 30px;
+	}
+	
+	.tabs input {
+		width: 70px;
+	}
+	
+	.tabs input#tab-2{
+		left: 70px;
+	}
+	
+	.tabs input#tab-3{
+		left: 140px;
+	}
+	
+	.tabs input#tab-4{
+		left: 210px;
+	}
+	
+	.roundtable tr td {
+		padding: .2em 0.5em;
+		font-size: 12px;
+	}
+}
+
+@media screen and (min-width: 330px) and (max-width: 500px) {
+	.tabs label {
+		width: 40px;
+	}
+	
+	.tabs input {
+		width: 80px;
+	}
+	
+	.tabs input#tab-2{
+		left: 80px;
+	}
+	
+	.tabs input#tab-3{
+		left: 160px;
+	}
+	
+	.tabs input#tab-4{
+		left: 240px;
+	}
+	
+	.roundtable tr td {
+		padding: .2em 0.5em;
+		font-size: 12px;
+	}
+}
+
+@media screen and (max-width : 800px) {
+	.bottomDiv {
+		white-space: nowrap;
+		overflow-x: auto;
+		width: 100%;
+		height: 78px;
+		float : left;
+		display:inline-block;
+	}
+}
+
+@media screen and (height : 320px) {
+	.content {
+		height: 200px;
+	}
 }

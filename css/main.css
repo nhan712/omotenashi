@@ -415,6 +415,10 @@ nav a:hover {
   background: -moz-linear-gradient(top,  #63B8EE,  #468CCF);
 }
 
+.normalButton {
+  width : 130px;
+}
+
 .button:hover {
   color: #14396A !important;
   background: #468CCF;
