@@ -23,90 +23,7 @@
   </head>
   <body>
     <header>
-		<nav class="top-nav"　style="height:52px">
-			<div class="container">
-				<div class="nav-wrapper"><a class="page-title">インジケータ</a></div>
-			</div>
-		</nav>
-	
-		<div class="container">
-			<a href="#" data-activates="nav-mobile" class="button-collapse top-nav waves-effect waves-light circle hide-on-large-only">
-				<i class="mdi-navigation-menu"></i>
-			</a>
-		</div>
-      
-		<ul id="nav-mobile" class="side-nav fixed">
-			<li class="logo">
-				<a id="logo-container" href="http://localhost/hotel" class="brand-logo">
-					<object id="front-page-logo" type="image/svg+xml" data="images/logo.png" style="margin-top:16px">Your browser does not support SVG</object>
-				</a>
-			</li>
-        		
-			<li class="no-padding">
-				<ul class="collapsible collapsible-accordion">
-		  
-					<li class="bold"><a class="collapsible-header  waves-effect waves-blue">部屋情報</a>
-						<div class="collapsible-body">
-							<ul>
-								<li><a href="screen04.html">棟</a></li>
-								<li><a href="screen04.html">ﾊﾟﾝﾄﾘｰ</a></li>
-								<li><a href="screen04.html">部屋</a></li>
-								<li><a href="screen04.html">詳細</a></li>
-							</ul>
-						</div>
-					</li>
-			
-					<li class="bold"><a class="collapsible-header  waves-effect waves-blue">宿泊客検索</a>
-						<div class="collapsible-body">
-							<ul>
-								<li><a href="screen08.html">あ</a></li>
-								<li><a href="screen08.html">か</a></li>
-								<li><a href="screen08.html">さ</a></li>
-								<li><a href="screen08.html">た</a></li>
-								<li><a href="screen08.html">な</a></li>
-								<li><a href="screen08.html">は</a></li>
-								<li><a href="screen08.html">ま</a></li>
-								<li><a href="screen08.html">や</a></li>
-								<li><a href="screen08.html">ら</a></li>
-								<li><a href="screen08.html">わ</a></li>
-							</ul>
-						</div>
-					</li>
-			
-					<li class="bold"><a class="collapsible-header  waves-effect waves-blue">手配登録</a>
-						<div class="collapsible-body">
-							<ul>
-								<li><a href="http://intl.kagaya.jp/">配達センター</a></li>
-								<li><a href="http://intl.kagaya.jp/">調理事務所</a></li>
-								<li><a href="http://intl.kagaya.jp/">用度事務所</a></li>
-								<li><a href="http://intl.kagaya.jp/">用度翌日</a></li>
-							</ul>
-						</div>
-					</li>
-			
-					<li class="bold"><a class="collapsible-header  waves-effect waves-blue">ピーク時間情報</a>
-						<div class="collapsible-body">
-							<ul>
-								<li><a href="screen14.html">IN</a></li>
-								<li><a href="screen14.html">夕食</a></li>
-								<li><a href="screen14.html">朝食</a></li>
-								<li><a href="screen14.html">OUT</a></li>
-							</ul>
-						</div>
-					</li>
-			
-					<li class="bold"><a class="collapsible-header  waves-effect waves-blue">インジケータ</a>
-						<div class="collapsible-body">
-							<ul>
-								<li><a href="screen15.html">棟</a></li>
-								<li><a href="screen15.html">ﾊﾟﾝﾄﾘｰ</a></li>
-								<li><a href="screen15.html">部屋</a></li>
-							</ul>
-						</div>
-					</li>
-				</ul>
-			</li>
-		</ul>
+		<!-- Using the header.html file at here -->
     </header>
 	
     <main>
@@ -114,17 +31,17 @@
 	</main>    
 	
     <!--  Scripts-->
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script>if (!window.jQuery) { document.write('<script src="bin/jquery-2.1.1.min.js"><\/script>'); }
-    </script>
-    <script src="js/jquery.timeago.min.js"></script>  
-    <script src="js/prism.js"></script>
+   	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="bin/materialize.js"></script>
     <script src="js/init.js"></script>
         
 	<script>
 		$(document).ready(function(){
-			
+			$( "header" ).load( "header.html", function( response, status, xhr ) {
+			  if ( status != "error" ) {
+			  	$('.page-title').text('インジケータ')
+			  } 
+			});
 		});
 	</script>
   </body>
