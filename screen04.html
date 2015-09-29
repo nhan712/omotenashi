@@ -444,7 +444,25 @@
 			$("header").load( "header.html", function( response, status, xhr ) {
 				if ( status != "error" ) {
 					$('.page-title').text('部屋情報')
-				} 
+					
+					var tab = getUrlParameter('tab');
+					
+					if (tab == "hotel") {
+						$('#hotelDiv').trigger('click');
+											
+					} else if (tab == "pantry") {
+						$('#pantryDiv').trigger('click'); 
+					} else if (tab == "room") {
+						$('#roomDiv').trigger('click'); 
+					} else if (tab == "detail") {
+						$('#detailDiv').trigger('click'); 
+					} else {
+						$('#hotelDiv').trigger('click');
+					}
+					
+					$('#menuRoom' +  tab.charAt(0).toUpperCase() + tab.slice(1)).addClass("active");
+					$('#menuRoom').trigger('click'); 
+				}
 			});
 			
 			moment.locale('ja');
@@ -452,21 +470,7 @@
 			var day = "（" + moment().format('dd') + "）";
 			$(".date-text").text(ymd + day);
 		
-			var tab = getUrlParameter('tab');
-			
 			$(window).ready(responsiveFn).resize(responsiveFn); 
-			
-			if (tab == "hotel") {
-				$('#hotelDiv').trigger('click'); 
-			} else if (tab == "pantry") {
-				$('#pantryDiv').trigger('click'); 
-			} else if (tab == "room") {
-				$('#roomDiv').trigger('click'); 
-			} else if (tab == "detail") {
-				$('#detailDiv').trigger('click'); 
-			} else {
-				$('#hotelDiv').trigger('click');
-			}
 	
 			$('#hotelTable tr').click(function() {
 				$('#pantryDiv').trigger('click'); 
