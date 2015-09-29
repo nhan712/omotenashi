@@ -24,480 +24,391 @@
   </head>
   <body>
     <header>
-		<nav class="top-nav">
-			<div class="container">
-				<div class="nav-wrapper"><a class="page-title">部屋情報</a></div>
-			</div>
-		</nav>
-	
-		<div class="container">
-			<a href="#" data-activates="nav-mobile" class="button-collapse top-nav waves-effect waves-light circle hide-on-large-only">
-				<i class="mdi-navigation-menu"></i>
-			</a>
-		</div>
-      
-		<ul id="nav-mobile" class="side-nav fixed">
-			<li class="logo">
-				<a id="logo-container" href="http://localhost/hotel" class="brand-logo">
-					<object id="front-page-logo" type="image/svg+xml" data="images/logo.png">Your browser does not support SVG</object>
-				</a>
-			</li>
-        		
-			<li class="no-padding">
-				<ul class="collapsible collapsible-accordion">
-		  
-					<li class="bold">
-						<a class="collapsible-header waves-effect waves-blue">部屋情報</a>
-						<div class="collapsible-body">
-							<ul>
-								<li><div class="collapsible-header"><i class="material-icons">business</i><a href="screen04.html">棟</a></div></li>
-								<li><div class="collapsible-header"><i class="material-icons">dns</i><a href="screen04.html?tab=pantry">ﾊﾟﾝﾄﾘｰ</a></div></li>
-								<li><div class="collapsible-header"><i class="material-icons">store</i><a href="screen04.html?tab=room">部屋</a></div></li>
-								<li><div class="collapsible-header"><i class="material-icons">view_headline</i><a href="screen04.html?tab=detail">詳細</a></div></li>
-							</ul>
-						</div>
-					</li>
-			
-					<li class="bold"><a class="collapsible-header  waves-effect waves-blue">宿泊客検索</a>
-						<div class="collapsible-body">
-							<ul>
-								<li><a href="screen08.html?tab=a">あ</a></li>
-								<li><a href="screen08.html?tab=ka">か</a></li>
-								<li><a href="screen08.html?tab=sa">さ</a></li>
-								<li><a href="screen08.html?tab=ta">た</a></li>
-								<li><a href="screen08.html?tab=na">な</a></li>
-								<li><a href="screen08.html?tab=ha">は</a></li>
-								<li><a href="screen08.html?tab=ma">ま</a></li>
-								<li><a href="screen08.html?tab=ya">や</a></li>
-								<li><a href="screen08.html?tab=ra">ら</a></li>
-								<li><a href="screen08.html?tab=wa">わ</a></li>
-							</ul>
-						</div>
-					</li>
-			
-					<li class="bold"><a class="collapsible-header  waves-effect waves-blue">手配登録</a>
-						<div class="collapsible-body">
-							<ul>
-								<li><a href="http://intl.kagaya.jp/">配達センター</a></li>
-								<li><a href="http://intl.kagaya.jp/">調理事務所</a></li>
-								<li><a href="http://intl.kagaya.jp/">用度事務所</a></li>
-								<li><a href="http://intl.kagaya.jp/">用度翌日出庫依頼</a></li>
-							</ul>
-						</div>
-					</li>
-			
-					<li class="bold"><a class="collapsible-header  waves-effect waves-blue">ピーク時間情報</a>
-						<div class="collapsible-body">
-							<ul>
-								<li><a href="screen14.html">IN</a></li>
-								<li><a href="screen14.html">夕食</a></li>
-								<li><a href="screen14.html">朝食</a></li>
-								<li><a href="screen14.html">OUT</a></li>
-							</ul>
-						</div>
-					</li>
-			
-					<li class="bold"><a class="collapsible-header waves-effect waves-blue">インジケータ</a>
-						<div class="collapsible-body">
-							<ul>
-								<li><a href="screen15.html">棟</a></li>
-								<li><a href="screen15.html">ﾊﾟﾝﾄﾘｰ</a></li>
-								<li><a href="screen15.html">部屋</a></li>
-							</ul>
-						</div>
-					</li>
-					
-					<li class="bold"><a class="collapsible-header waves-effect waves-blue" href="index.html">ログアウト</a>
-						
-					</li>
-				</ul>
-			</li>
-		</ul>
+		<!-- Using the header.html file at here -->
     </header>
 	
     <main>
 		<div class="container">
-			<div class="row">
-				<div id="introduction" class="section scrollspy">
-					<ul class="collapsible collapsible-accordion" data-collapsible="accordion">
-						<li>
-							<div class="collapsible-header" id="hotelDiv">
-								<i class="material-icons">business</i>棟
-							</div>
-							
-							<div class="collapsible-body">
-								<table id="hotelTable" class="bordered highlight">
-									<thead>
-										<tr class="light-blue lighten-4">
-											<th data-field="id">旅館</th>
-											<th data-field="name">客様</th>
-											<th data-field="price">部屋数</th>
-											<th data-field="price">組</th>
-											<th data-field="price">名</th>
-										</tr>
-									</thead>
+			<p class="date-text">
+			</p>
+			
+			<ul class="collapsible collapsible-accordion" data-collapsible="accordion">
+				<li>
+					<div class="collapsible-header" id="hotelDiv">
+						<i class="material-icons">business</i>棟
+					</div>
+					
+					<div class="collapsible-body">
+						<table id="hotelTable" class="bordered highlight">
+							<thead>
+								<tr class="light-blue lighten-4">
+									<th data-field="id">旅館</th>
+									<th data-field="name">客様</th>
+									<th data-field="price">部屋数</th>
+									<th data-field="price">組</th>
+									<th data-field="price">名</th>
+								</tr>
+							</thead>
 
-									<tbody>
-										<tr>
-											<td style="width:24%">加賀屋</td>
-											<td style="width:18%">者亭</td>
-											<td style="width:22%">48部屋</td>
-											<td style="width:18%">26組</td>
-											<td style="width:18%">235名</td>
-										</tr>
+							<tbody>
+								<tr>
+									<td style="width:24%">加賀屋</td>
+									<td style="width:18%">者亭</td>
+									<td style="width:22%">48部屋</td>
+									<td style="width:18%">26組</td>
+									<td style="width:18%">235名</td>
+								</tr>
+			
+								<tr>
+									<td>加賀屋</td>
+									<td>客段</td>
+									<td>23部屋</td>
+									<td>18組</td>
+									<td>72名</td>
+								</tr>
+			
+								<tr>
+									<td>加賀屋</td>
+									<td>本</td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+			
+								<tr>
+									<td>加賀屋</td>
+									<td>宴会</td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								
+								<tr>
+									<td>あうの風</td>
+									<td>東の風</td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								
+								<tr>
+									<td>あうの風</td>
+									<td>西の風</td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								
+								<tr>
+									<td>あうの風</td>
+									<td>宴会</td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</li>
+
+				<li>
+					<div class="collapsible-header" id="pantryDiv">
+						<i class="material-icons">dns</i>ﾊﾟﾝﾄﾘｰ
+					</div>
 					
-										<tr>
-											<td>加賀屋</td>
-											<td>客段</td>
-											<td>23部屋</td>
-											<td>18組</td>
-											<td>72名</td>
-										</tr>
-					
-										<tr>
-											<td>加賀屋</td>
-											<td>本</td>
-											<td></td>
-											<td></td>
-											<td></td>
-										</tr>
-					
-										<tr>
-											<td>加賀屋</td>
-											<td>宴会</td>
-											<td></td>
-											<td></td>
-											<td></td>
-										</tr>
-										
-										<tr>
-											<td>あうの風</td>
-											<td>東の風</td>
-											<td></td>
-											<td></td>
-											<td></td>
-										</tr>
-										
-										<tr>
-											<td>あうの風</td>
-											<td>西の風</td>
-											<td></td>
-											<td></td>
-											<td></td>
-										</tr>
-										
-										<tr>
-											<td>あうの風</td>
-											<td>宴会</td>
-											<td></td>
-											<td></td>
-											<td></td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</li>
-	  
-						<li>
-							<div class="collapsible-header" id="pantryDiv">
-								<i class="material-icons">dns</i>ﾊﾟﾝﾄﾘｰ
-							</div>
+					<div class="collapsible-body">
+						<table id="pantryTable" class="bordered highlight multiTable"> 
+							<thead>
+								<tr class="light-blue lighten-4">
+									<th data-field="id" style="width:25%">階</th>
+									<th data-field="name" style="width:25%">部屋</th>
+									<th data-field="price" style="width:25%">組</th>
+									<th data-field="price" style="width:25%">名</th>
+								</tr>
+							</thead>
 							
-							<div class="collapsible-body">
-								<table id="pantryTable" class="bordered highlight multiTable"> 
-									<thead>
-										<tr class="light-blue lighten-4">
-											<th data-field="id" style="width:25%">階</th>
-											<th data-field="name" style="width:25%">部屋</th>
-											<th data-field="price" style="width:25%">組</th>
-											<th data-field="price" style="width:25%">名</th>
-										</tr>
-									</thead>
-									
-									<tbody>
-										<tr>
-											<td colspan="4">
-												<table>
-													<tr>
-														<td class="col25">12階</td>
-														<td class="col25">6部屋</td>
-														<td class="col25">3組</td>
-														<td class="col25">16名</td>
-													</tr>
-													
-													<tr>
-														<td colspan="4">明日香</td>
-													</tr>
-												</table>
-											</td>
-										</tr>
-										
-										<tr>
-											<td colspan="4">
-												<table>
-													<tr>
-														<td class="col25">11階</td>
-														<td class="col25">6部屋</td>
-														<td class="col25">1組</td>
-														<td class="col25">24名</td>
-													</tr>
-													
-													<tr>
-														<td colspan="4">蝶子</td>
-													</tr>
-												</table>
-											</td>
-										</tr>
-										
-										<tr>
-											<td colspan="4">
-												<table>
-													<tr>
-														<td class="col25">10階</td>
-														<td class="col25">6部屋</td>
-														<td class="col25">1組</td>
-														<td class="col25">24名</td>
-													</tr>
-													
-													<tr>
-														<td colspan="4">大輔</td>
-													</tr>
-												</table>
-											</td>
-										</tr>
-										
-										<tr>
-											<td colspan="4">
-												<table>
-													<tr>
-														<td class="col25">91階</td>
-														<td class="col25">6部屋</td>
-														<td class="col25">3組</td>
-														<td class="col25">24名</td>
-													</tr>
-													
-													<tr>
-														<td colspan="4">遥菜</td>
-													</tr>
-												</table>
-											</td>
-										</tr>
-										
-										<tr>
-											<td colspan="4">
-												<table style="border:0px">
-													<tr>
-														<td class="col25">8階</td>
-														<td class="col25">6部屋</td>
-														<td class="col25">5組</td>
-														<td class="col25">16名</td>
-													</tr>
-													
-													<tr>
-														<td colspan="4">秀吉</td>
-													</tr>
-												</table>
-											</td>
-										</tr>
-										
-										<tr>
-											<td colspan="4">
-												<table style="border:0px">
-													<tr>
-														<td class="col25">7階</td>
-														<td class="col25">6部屋</td>
-														<td class="col25">3組</td>
-														<td class="col25">22名</td>
-													</tr>
-													
-													<tr>
-														<td colspan="4">和花</td>
-													</tr>
-												</table>
-											</td>
-										</tr>
-										
-										<tr>
-											<td colspan="4">
-												<table style="border:0px">
-													<tr>
-														<td class="col25">6階</td>
-														<td class="col25">6部屋</td>
-														<td class="col25">3組</td>
-														<td class="col25">16名</td>
-													</tr>
-													
-													<tr>
-														<td colspan="4">博斗</td>
-													</tr>
-												</table>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</li>
-					  
-						<li>
-							<div class="collapsible-header" id="roomDiv"><i class="material-icons">store</i>部屋</div>
-							<div class="collapsible-body">
-								<table id="roomTable" class="bordered highlight multiTable"> 
-									<thead>
-										<tr class="light-blue lighten-4">
-											<th style="width:15%">部屋</th>
-											<th style="width:20%">地方</th>
-											<th style="width:25%">客様</th>
-											<th style="width:20%">名数</th>
-											<th style="width:20%">大人数</th>
-										</tr>
-									</thead>
-									
-									<tbody>
-										<tr>
-											<td colspan="5">
-												<table>
-													<tr>
-														<td class="col15">1208</td>
-														<td class="col20">《東京》</td>
-														<td class="col25">田中一郎　様</td>
-														<td class="col20">2/6 名</td>
-														<td class="col20">大人2名</td>
-													</tr>
-													
-													<tr>
-														<td colspan="2">IN:17:00</td>
-														<td>夕:19:30</td>
-														<td>朝:8:00</td>
-														<td>OUT:10:00</td>
-													</tr>
-													
-													<tr>
-														<td class="mediumRow" colspan="5">●翌日，能登観光手配</td>
-													</tr>
-												</table>
-											</td>
-										</tr>
-										
-										<tr>
-											<td colspan="5">
-												<table>
-													<tr>
-														<td class="col15">1207</td>
-														<td class="col20">《東京》</td>
-														<td class="col25">田中一郎　様</td>
-														<td class="col20">4/6 名</td>
-														<td class="col20">大人4名</td>
-													</tr>
-													
-													<tr>
-														<td colspan="2">IN:17:00</td>
-														<td>夕:19:30</td>
-														<td>朝:8:00</td>
-														<td>OUT:10:00</td>
-													</tr>
-												</table>
-											</td>
-										</tr>
-										
-										<tr>
-											<td colspan="5">
-												<table>
-													<tr>
-														<td class="col15">1206</td>
-														<td class="col20">《大阪》</td>
-														<td class="col25">大樹　様</td>
-														<td class="col20">2/6 名</td>
-														<td class="col20">大人2名</td>
-													</tr>
-													
-													<tr>
-														<td colspan="2">IN:17:00</td>
-														<td>夕:18:30</td>
-														<td>朝:8:30</td>
-														<td>OUT:17:00</td>
-													</tr>
-												</table>
-											</td>
-										</tr>
-										
-										<tr>
-											<td colspan="5">
-												<table>
-													<tr>
-														<td class="col15">1205</td>
-														<td class="col20">《京都》</td>
-														<td class="col25">田中一郎　様</td>
-														<td class="col20">2/8 名</td>
-														<td class="col20">大人2名</td>
-													</tr>
-													
-													<tr>
-														<td colspan="2">IN:17:00</td>
-														<td>夕:18:30</td>
-														<td>朝:8:30</td>
-														<td>OUT:9:30</td>
-													</tr>
-												</table>
-											</td>
-										</tr>
-										
-										<tr>
-											<td colspan="5">
-												<table>
-													<tr>
-														<td class="col15">1203</td>
-														<td class="col20">《京都》</td>
-														<td class="col25">田中一郎　様</td>
-														<td class="col20">2/8 名</td>
-														<td class="col20">大人2名</td>
-													</tr>
-													
-													<tr>
-														<td colspan="2">IN:17:00</td>
-														<td>夕:18:30</td>
-														<td>朝:8:30</td>
-														<td>OUT:9:30</td>
-													</tr>
-												</table>
-											</td>
-										</tr>
-										
-										<tr>
-											<td colspan="5">
-												<table>
-													<tr>
-														<td class="col15">1202</td>
-														<td class="col20">《京都》</td>
-														<td class="col25">田中一郎　様</td>
-														<td class="col20">2/8 名</td>
-														<td class="col20">大人2名</td>
-													</tr>
-													
-													<tr>
-														<td colspan="2">IN:17:00</td>
-														<td>夕:18:30</td>
-														<td>朝:8:30</td>
-														<td>OUT:9:30</td>
-													</tr>
-												</table>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</li>
-					  
-						<li>
-							<div class="collapsible-header" id="detailDiv"><i class="material-icons">view_headline</i>詳細</div>
-							<div class="collapsible-body">
-								<p id="detail">
-									
-								</p>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</div>
+							<tbody>
+								<tr>
+									<td colspan="4">
+										<table>
+											<tr>
+												<td class="col25">12階</td>
+												<td class="col25">6部屋</td>
+												<td class="col25">3組</td>
+												<td class="col25">16名</td>
+											</tr>
+											
+											<tr>
+												<td colspan="4">明日香</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								
+								<tr>
+									<td colspan="4">
+										<table>
+											<tr>
+												<td class="col25">11階</td>
+												<td class="col25">6部屋</td>
+												<td class="col25">1組</td>
+												<td class="col25">24名</td>
+											</tr>
+											
+											<tr>
+												<td colspan="4">蝶子</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								
+								<tr>
+									<td colspan="4">
+										<table>
+											<tr>
+												<td class="col25">10階</td>
+												<td class="col25">6部屋</td>
+												<td class="col25">1組</td>
+												<td class="col25">24名</td>
+											</tr>
+											
+											<tr>
+												<td colspan="4">大輔</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								
+								<tr>
+									<td colspan="4">
+										<table>
+											<tr>
+												<td class="col25">91階</td>
+												<td class="col25">6部屋</td>
+												<td class="col25">3組</td>
+												<td class="col25">24名</td>
+											</tr>
+											
+											<tr>
+												<td colspan="4">遥菜</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								
+								<tr>
+									<td colspan="4">
+										<table style="border:0px">
+											<tr>
+												<td class="col25">8階</td>
+												<td class="col25">6部屋</td>
+												<td class="col25">5組</td>
+												<td class="col25">16名</td>
+											</tr>
+											
+											<tr>
+												<td colspan="4">秀吉</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								
+								<tr>
+									<td colspan="4">
+										<table style="border:0px">
+											<tr>
+												<td class="col25">7階</td>
+												<td class="col25">6部屋</td>
+												<td class="col25">3組</td>
+												<td class="col25">22名</td>
+											</tr>
+											
+											<tr>
+												<td colspan="4">和花</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								
+								<tr>
+									<td colspan="4">
+										<table style="border:0px">
+											<tr>
+												<td class="col25">6階</td>
+												<td class="col25">6部屋</td>
+												<td class="col25">3組</td>
+												<td class="col25">16名</td>
+											</tr>
+											
+											<tr>
+												<td colspan="4">博斗</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</li>
+			  
+				<li>
+					<div class="collapsible-header" id="roomDiv"><i class="material-icons">store</i>部屋</div>
+					<div class="collapsible-body">
+						<table id="roomTable" class="bordered highlight multiTable"> 
+							<thead>
+								<tr class="light-blue lighten-4">
+									<th style="width:15%">部屋</th>
+									<th style="width:20%">地方</th>
+									<th style="width:25%">客様</th>
+									<th style="width:20%">名数</th>
+									<th style="width:20%">大人数</th>
+								</tr>
+							</thead>
+							
+							<tbody>
+								<tr>
+									<td colspan="5">
+										<table>
+											<tr>
+												<td class="col15">1208</td>
+												<td class="col20">《東京》</td>
+												<td class="col25">田中一郎　様</td>
+												<td class="col20">2/6 名</td>
+												<td class="col20">大人2名</td>
+											</tr>
+											
+											<tr>
+												<td colspan="2">IN:17:00</td>
+												<td>夕:19:30</td>
+												<td>朝:8:00</td>
+												<td>OUT:10:00</td>
+											</tr>
+											
+											<tr>
+												<td class="mediumRow" colspan="5">●翌日，能登観光手配</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								
+								<tr>
+									<td colspan="5">
+										<table>
+											<tr>
+												<td class="col15">1207</td>
+												<td class="col20">《東京》</td>
+												<td class="col25">田中一郎　様</td>
+												<td class="col20">4/6 名</td>
+												<td class="col20">大人4名</td>
+											</tr>
+											
+											<tr>
+												<td colspan="2">IN:17:00</td>
+												<td>夕:19:30</td>
+												<td>朝:8:00</td>
+												<td>OUT:10:00</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								
+								<tr>
+									<td colspan="5">
+										<table>
+											<tr>
+												<td class="col15">1206</td>
+												<td class="col20">《大阪》</td>
+												<td class="col25">大樹　様</td>
+												<td class="col20">2/6 名</td>
+												<td class="col20">大人2名</td>
+											</tr>
+											
+											<tr>
+												<td colspan="2">IN:17:00</td>
+												<td>夕:18:30</td>
+												<td>朝:8:30</td>
+												<td>OUT:17:00</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								
+								<tr>
+									<td colspan="5">
+										<table>
+											<tr>
+												<td class="col15">1205</td>
+												<td class="col20">《京都》</td>
+												<td class="col25">田中一郎　様</td>
+												<td class="col20">2/8 名</td>
+												<td class="col20">大人2名</td>
+											</tr>
+											
+											<tr>
+												<td colspan="2">IN:17:00</td>
+												<td>夕:18:30</td>
+												<td>朝:8:30</td>
+												<td>OUT:9:30</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								
+								<tr>
+									<td colspan="5">
+										<table>
+											<tr>
+												<td class="col15">1203</td>
+												<td class="col20">《京都》</td>
+												<td class="col25">田中一郎　様</td>
+												<td class="col20">2/8 名</td>
+												<td class="col20">大人2名</td>
+											</tr>
+											
+											<tr>
+												<td colspan="2">IN:17:00</td>
+												<td>夕:18:30</td>
+												<td>朝:8:30</td>
+												<td>OUT:9:30</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								
+								<tr>
+									<td colspan="5">
+										<table>
+											<tr>
+												<td class="col15">1202</td>
+												<td class="col20">《京都》</td>
+												<td class="col25">田中一郎　様</td>
+												<td class="col20">2/8 名</td>
+												<td class="col20">大人2名</td>
+											</tr>
+											
+											<tr>
+												<td colspan="2">IN:17:00</td>
+												<td>夕:18:30</td>
+												<td>朝:8:30</td>
+												<td>OUT:9:30</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</li>
+			  
+				<li>
+					<div class="collapsible-header" id="detailDiv"><i class="material-icons">view_headline</i>詳細</div>
+					<div class="collapsible-body">
+						<p id="detail">
+							
+						</p>
+					</div>
+				</li>
+			</ul>
 		</div>
 	</main>    
 	
@@ -505,7 +416,8 @@
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script>if (!window.jQuery) { document.write('<script src="bin/jquery-2.1.1.min.js"><\/script>'); }
     </script>
-    <script src="js/jquery.timeago.min.js"></script>  
+    <script src="js/jquery.timeago.min.js"></script> 
+	<script src="js/vendor/moment-with-locales.js"></script>
     <script src="js/prism.js"></script>
     <script src="bin/materialize.js"></script>
     <script src="js/init.js"></script>
@@ -529,6 +441,17 @@
 		var width = 0;
 	
 		$(document).ready(function() {
+			$("header").load( "header.html", function( response, status, xhr ) {
+				if ( status != "error" ) {
+					$('.page-title').text('部屋情報')
+				} 
+			});
+			
+			moment.locale('ja');
+			var ymd = moment().format('ll');
+			var day = "（" + moment().format('dd') + "）";
+			$(".date-text").text(ymd + day);
+		
 			var tab = getUrlParameter('tab');
 			
 			$(window).ready(responsiveFn).resize(responsiveFn); 
