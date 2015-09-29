@@ -47,3 +47,71 @@ th .col45, td .col45 {
 th .col55, td .col55 {
 	width : 55%;
 }
+
+td.mediumRow {
+  position: relative;
+  padding : 10px;
+  overflow: hidden;
+}
+
+.multiTable thead tr th1 {
+	position: relative;
+	padding : 5px;
+	overflow: hidden;
+}
+
+.multiTable tbody tr td {
+	position: relative;
+	padding : 5px;
+	overflow: hidden;
+}
+
+th .col5, td .col5 {
+	width : 5% !important;
+}
+
+th .col10, td .col10 {
+	width : 10% !important;
+}
+
+th .col12, td .col12 {
+	width : 12% !important;
+}
+
+th .col38, td .col38 {
+	width : 38% !important;
+}
+
+th .col15, td .col15 {
+	width : 15% !important;
+}
+
+th .col20, td .col20 {
+	width : 20% !important;
+}
+
+th .col25, td .col25 {
+	width : 25%;
+}
+
+th .col30, td .col30 {
+	width : 30%;
+}
+
+th .col45, td .col45 {
+	width : 45% !important;
+}
+
+th .col55, td .col55 {
+	width : 55%;
+}
+
+th .col75, td .col75 {
+	width : 75%;
+}
+
+td.eclipsis {
+	text-overflow: ellipsis; 
+	overflow: hidden; 
+	white-space: nowrap;
+}
