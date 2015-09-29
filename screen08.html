@@ -1494,60 +1494,9 @@
     <script src="js/prism.js"></script>
     <script src="bin/materialize.js"></script>
     <script src="js/init.js"></script>
-        
+    <script src="js/main.js"></script> 
 	<script>
-		var getUrlParameter = function getUrlParameter(sParam) {
-			var sPageURL = decodeURIComponent(window.location.search.substring(1)),
-				sURLVariables = sPageURL.split('&'),
-				sParameterName,
-				i;
-
-			for (i = 0; i < sURLVariables.length; i++) {
-				sParameterName = sURLVariables[i].split('=');
-
-				if (sParameterName[0] === sParam) {
-					return sParameterName[1] === undefined ? true : sParameterName[1];
-				}
-			}
-		};
-	
-		$(document).ready(function() {
-			$("header").load( "header.html", function( response, status, xhr ) {
-				if ( status != "error" ) {
-					$('.page-title').text('宿泊客検索')
-					
-					var tab = getUrlParameter('tab');
-					
-					if (tab == "a") {
-						$('#aDiv').trigger('click'); 
-					} else if (tab == "ka") {
-						$('#kaDiv').trigger('click'); 
-					} else if (tab == "sa") {
-						$('#saDiv').trigger('click'); 
-					} else if (tab == "ta") {
-						$('#taDiv').trigger('click'); 
-					} else if (tab == "na") {
-						$('#naDiv').trigger('click'); 
-					} else if (tab == "ha") {
-						$('#haDiv').trigger('click');
-					} else if (tab == "ma") {
-						$('#maDiv').trigger('click');
-					} else if (tab == "ya") {
-						$('#yaDiv').trigger('click'); 
-					} else if (tab == "ra") {
-						$('#raDiv').trigger('click'); 
-					} else if (tab == "wa") {
-						$('#waDiv').trigger('click'); 
-					} else {
-						$('#aDiv').trigger('click');
-					}
-					
-					$('#menuSearch' +  tab.charAt(0).toUpperCase() + tab.slice(1)).addClass("active");
-					$('#menuSearch').trigger('click'); 
-				} 
-			});
-			
-		});
+		
 	</script>
   </body>
 </html>

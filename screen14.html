@@ -44,14 +44,8 @@
       <script src="bin/materialize.js"></script>
       <script src="js/init.js"></script>
       <script src="js/canvasjs.min.js"></script>
+      <script src="js/main.js"></script> 
       <script type="text/javascript">
-        $(document).ready(function(){
-          $( "header" ).load( "header.html", function( response, status, xhr ) {
-            if ( status != "error" ) {
-              $('.page-title').text('ピーク時間情報')
-            } 
-          });
-        });
         window.onload = function () {
           var chart = new CanvasJS.Chart("barchart_material",
           {
