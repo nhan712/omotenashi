@@ -12,13 +12,10 @@
     <link href="css/materialize.css" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/screen03.css">
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
   </head>
   <body>
     <div class="container">
-        <!-- <div class="col-md-3"></div> -->
-        <!-- <div class="col-md-6"> -->
         <br>
         <br>
         <br>
@@ -30,17 +27,41 @@
                 <span class="hotel-text" style="margin: 0 3% 0 10%;">加賀屋</span>
                 <span class="customer-text">山田 12階</span>
                 <p>
-                    <a class="waves-effect waves-light blue lighten-1 btn btn-large btn-block" href="screen04.html">部屋情報</a>
-                    <a class="waves-effect waves-light blue lighten-1 btn btn-large btn-block" href="screen08.html">宿泊客検索</a>
-                    <a class="waves-effect waves-light blue lighten-1 btn btn-large btn-block" id="scr10_direct">手配登録</a>
-                    <a class="waves-effect waves-light blue lighten-1 btn btn-large btn-block" href="screen14.html">ピーク時間情報</a>
-                    <a class="waves-effect waves-light blue lighten-1 btn btn-large btn-block" href="screen15.html">インジケータ</a>
+                    <a class="waves-effect waves-light blue lighten-1 btn btn-large btn-block modal-trigger" href="#modal1">配達センター</a>
+                    <a class="waves-effect waves-light blue lighten-1 btn btn-large btn-block" href="#modal1">調理事務所</a>
+                    <a class="waves-effect waves-light blue lighten-1 btn btn-large btn-block" href="#modal1">用度事務所</a>
+                    <a class="waves-effect waves-light blue lighten-1 btn btn-large btn-block" href="#modal1">用度翌日出庫依頼</a>
                 </p>
             </div>
             <div class="col s1 m3 l3"></div>
         </div>
-        <!-- <div class="col-md-3"></div> -->
+      
     </div>
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="staff-id" type="text" class="validate">
+                        <label for="staff-id">Staff ID</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="password" type="password" class="validate">
+                        <label for="password">Password</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action waves-effect waves-blue btn-flat">Login</a>
+            <a href="#!" class="modal-close waves-effect waves-blue btn-flat">Cancel</a>
+        </div>
+    </div>
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
     <script src="js/vendor/moment-with-locales.js"></script>
@@ -48,6 +69,12 @@
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
     <script type="text/javascript">
+        $(document).ready(function(){
+            $('.modal-trigger').leanModal();
+            $('.modal-action').click(function() {
+               location.href = "http://intl.kagaya.jp/"
+            });
+        });
         var getUrlParameter = function getUrlParameter(sParam) {
             var sPageURL = decodeURIComponent(window.location.search.substring(1)),
                 sURLVariables = sPageURL.split('&'),
@@ -64,10 +91,7 @@
         };
         var d = getUrlParameter('dhd');
         $(".date-text").text(d); 
-        $("#scr10_direct").click(function() {
-            var url = "screen10.html?dhd=" + $('.date-text').text();
-            location.href = url;
-        });
+
     </script>
   </body>
 </html>

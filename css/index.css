@@ -15,7 +15,7 @@
   border-bottom: 1px solid #eee;
   width: 100%;
 }
-input:focus {
+/*input:focus {
   border-bottom: 1px solid #42A5F5 !important;
   box-shadow: 0 1px 0 0 #42A5F5 !important;
 }
@@ -24,7 +24,7 @@ input:focus + label {
 }
 label.active {
   color: #42A5F5 !important;
-}
+}*/
 .login-btn {
   text-align: center;
   margin: 0 auto;
@@ -38,23 +38,17 @@ label.active {
   float: right;
   cursor: pointer;
 }
-input[type="text"].valid, input[type="text"]:focus.valid, 
+/*input[type="text"].valid, input[type="text"]:focus.valid, 
 input[type="password"].valid, input[type="password"]:focus.valid {
   border-bottom: 1px solid #42A5F5 !important;
   box-shadow: 0 1px 0 0 #42A5F5 !important;
-}
-/*.picker__today {
-  padding: 0 1rem;
-}
-.btn-flat {
-  padding: 0 1rem;
 }*/
-.picker__footer {
+/*.picker__footer {
   text-align: center;
 }
 .picker__frame {
   top: 0 !important;
-}
-p:hover, p:focus {
+}*/
+/*p:hover, p:focus {
   outline: none;
-}
+}*/

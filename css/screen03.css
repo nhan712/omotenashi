@@ -1,4 +1,4 @@
-.date-text, .hotel-text, .customer-text {font-size: 14px;}
+/*.date-text, .hotel-text, .customer-text {font-size: 14px;}
 @media only screen and (max-width: 900px) {
   .date-text, .hotel-text, .customer-text {font-size: 13px;} }
 @media only screen and (max-width: 667px) {
@@ -6,4 +6,4 @@
 @media only screen and (max-width: 480px) {
   .date-text, .hotel-text, .customer-text {font-size: 11px;} }
 @media only screen and (max-width: 320px) {
-  .date-text, .hotel-text, .customer-text {font-size: 10px;} }
+  .date-text, .hotel-text, .customer-text {font-size: 10px;} }*/
