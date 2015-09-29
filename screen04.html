@@ -421,7 +421,8 @@
     <script src="js/prism.js"></script>
     <script src="bin/materialize.js"></script>
     <script src="js/init.js"></script>
-        
+    <script src="js/main.js"></script>
+       
 	<script>
 		var getUrlParameter = function getUrlParameter(sParam) {
 			var sPageURL = decodeURIComponent(window.location.search.substring(1)),
@@ -441,30 +442,6 @@
 		var width = 0;
 	
 		$(document).ready(function() {
-			$("header").load( "header.html", function( response, status, xhr ) {
-				if ( status != "error" ) {
-					$('.page-title').text('部屋情報')
-					
-					var tab = getUrlParameter('tab');
-					
-					if (tab == "hotel") {
-						$('#hotelDiv').trigger('click');
-											
-					} else if (tab == "pantry") {
-						$('#pantryDiv').trigger('click'); 
-					} else if (tab == "room") {
-						$('#roomDiv').trigger('click'); 
-					} else if (tab == "detail") {
-						$('#detailDiv').trigger('click'); 
-					} else {
-						$('#hotelDiv').trigger('click');
-					}
-					
-					$('#menuRoom' +  tab.charAt(0).toUpperCase() + tab.slice(1)).addClass("active");
-					$('#menuRoom').trigger('click'); 
-				}
-			});
-			
 			moment.locale('ja');
 			var ymd = moment().format('ll');
 			var day = "（" + moment().format('dd') + "）";
