@@ -16,6 +16,7 @@
 	<meta name="theme-color" content="#EE6E73">
 	<!-- CSS-->
 	<link href="css/Screen04.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
 	<link href="css/ghpages-materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
 	<link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
 	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -103,9 +104,9 @@
 						<a class="collapsible-header  waves-effect waves-blue" id="menuIndicator">インジケータ</a>
 						<div class="collapsible-body">
 							<ul>
-								<li id="menuIndicatorHotel?tab=hotel"><a href="screen15.html">棟</a></li>
-								<li id="menuIndicatorPantry?tab=pantry"><a href="screen15.html">ﾊﾟﾝﾄﾘｰ</a></li>
-								<li id="menuIndicatorRoom?tab=room"><a href="screen15.html">部屋</a></li>
+								<li id="menuIndicatorHotel"><div class="collapsible-header"><a>棟</a></div></li>
+								<li id="menuIndicatorPantry"><div class="collapsible-header"><a>ﾊﾟﾝﾄﾘｰ</a></div></li>
+								<li id="menuIndicatorRoom"><div class="collapsible-header"><a>部屋</a></div></li>
 							</ul>
 						</div>
 					</li>
@@ -224,6 +225,26 @@
 						break;
 					default:
 						loadPage("screen14", "in");
+				}
+			});
+			
+			$('[id^=menuIndicator]').click(function(event) {
+				var id = jQuery(this).attr("id")
+				
+				if (id == 'menuIndicator') return;
+																				
+				switch (id) {
+					case 'menuIndicatorHotel':
+						loadPage("screen15", "hotel");
+						break;
+					case 'menuIndicatorPantry':
+						loadPage("screen15", "pantry");
+						break;
+					case 'menuIndicatorRoom':
+						loadPage("screen15", "room");
+						break;
+					default:
+						loadPage("screen15", "hotel");
 				}
 			});
 						
