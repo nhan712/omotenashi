@@ -1,4 +1,6 @@
 /*Custom JS*/
+var width = 0;
+
 $("header").load( "header.html", function( response, status, xhr ) {
 	if ( status != "error" ) {
 		var url = window.location.href; 
@@ -18,10 +20,14 @@ $("header").load( "header.html", function( response, status, xhr ) {
 			$('.page-title').text('インジケータ');
 			getHighLightMenu('menuIndicator');
 		}
-		
-		
 	}
 });
+
+function responsiveFn() {
+	width = $(window).width();
+}
+
+$(window).ready(responsiveFn).resize(responsiveFn); 
 
 function loadCollapsible() {
 	$('.collapsible').collapsible({
