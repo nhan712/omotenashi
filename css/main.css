@@ -47,3 +47,17 @@ span.badge-default {
   color: #fff;
   background-color: #26a69a;
 }
+.triangle-right {
+  position: relative;
+}
+.triangle-right > i {
+  position: absolute;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  border: 1em solid transparent;
+  border-left: 1em solid #fdd835;
+  right: 0em;
+  top: 0.8em;
+}
