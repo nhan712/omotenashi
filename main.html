@@ -24,6 +24,98 @@
 <body>
     <header>
 		<!-- Using the header.html file at here -->
+		<nav class="top-nav">
+			<div class="container">
+				<div class="nav-wrapper"><a class="page-title">部屋情報</a></div>
+			</div>
+		</nav>
+
+		<div class="container">
+			<a href="#" data-activates="nav-mobile" class="button-collapse top-nav waves-effect waves-light circle hide-on-large-only">
+				<i class="mdi-navigation-menu"></i>
+			</a>
+		</div>
+
+		<ul id="nav-mobile" class="side-nav fixed">
+			<li class="logo">
+				<a id="logo-container" href="./" class="brand-logo">
+					<object id="front-page-logo" type="image/svg+xml" data="images/logo.png"></object>
+				</a>
+			</li>
+
+			<li class="no-padding">
+				<ul class="collapsible collapsible-accordion">
+
+					<li class="bold">
+						<a class="collapsible-header waves-effect waves-blue" id="menuRoom">部屋情報</a>
+						<div class="collapsible-body">
+							<ul>
+								<li id="menuRoomHotel"><div class="collapsible-header"><i class="material-icons">business</i><a>棟</a></div></li>
+								<li id="menuRoomPantry"><div class="collapsible-header"><i class="material-icons">dns</i><a>ﾊﾟﾝﾄﾘｰ</a></div></li>
+								<li id="menuRoomRoom"><div class="collapsible-header"><i class="material-icons">store</i><a>部屋</a></div></li>
+								<li id="menuRoomDetail"><div class="collapsible-header"><i class="material-icons">view_headline</i><a>詳細</a></div></li>
+							</ul>
+						</div>
+					</li>
+					
+					<li class="bold">
+						<a class="collapsible-header waves-effect waves-blue" id="menuSearch">宿泊客検索</a>
+						<div class="collapsible-body">
+							<ul>
+								<li id="menuSearchA"><a>あ</a></li>
+								<li id="menuSearchKa"><a>か</a></li>
+								<li id="menuSearchSa"><a>さ</a></li>
+								<li id="menuSearchTa"><a>た</a></li>
+								<li id="menuSearchNa"><a>な</a></li>
+								<li id="menuSearchHa"><a>は</a></li>
+								<li id="menuSearchMa"><a>ま</a></li>
+								<li id="menuSearchYa"><a>や</a></li>
+								<li id="menuSearchRa"><a>ら</a></li>
+								<li id="menuSearchWa"><a>わ</a></li>
+							</ul>
+						</div>
+					</li>
+					
+					<li class="bold"><a class="collapsible-header  waves-effect waves-blue">手配登録</a>
+						<div class="collapsible-body">
+							<ul>
+								<li><a href="http://www.kagaya.co.jp/rooms/" target="_blank">配達センター</a></li>
+								<li><a href="http://www.kagaya.co.jp/rooms/" target="_blank">調理事務所</a></li>
+								<li><a href="http://www.kagaya.co.jp/rooms/" target="_blank">用度事務所</a></li>
+								<li><a href="http://www.kagaya.co.jp/rooms/" target="_blank">用度翌日</a></li>
+							</ul>
+						</div>
+					</li>
+					
+					<li class="bold">
+						<a class="collapsible-header  waves-effect waves-blue" id="menuPeak">ピーク時間情報</a>
+						<div class="collapsible-body">
+							<ul>
+								<li id="menuPeakIn"><div class="collapsible-header"><i class="material-icons">call_received</i>IN</div></li>
+								<li id="menuPeakNoon"><div class="collapsible-header"><i class="material-icons">call_received</i>夕食</div></li>
+								<li id="menuPeakMoring"><div class="collapsible-header"><i class="material-icons">call_received</i>朝食</div></li>
+								<li id="menuPeakOut"><div class="collapsible-header"><i class="material-icons">call_made</i>OUT</div></li>
+							</ul>
+						</div>
+					</li>
+					
+					<li class="bold">
+						<a class="collapsible-header  waves-effect waves-blue" id="menuIndicator">インジケータ</a>
+						<div class="collapsible-body">
+							<ul>
+								<li id="menuIndicatorHotel?tab=hotel"><a href="screen15.html">棟</a></li>
+								<li id="menuIndicatorPantry?tab=pantry"><a href="screen15.html">ﾊﾟﾝﾄﾘｰ</a></li>
+								<li id="menuIndicatorRoom?tab=room"><a href="screen15.html">部屋</a></li>
+							</ul>
+						</div>
+					</li>
+					
+					<li class="bold">
+						<a href="index.html" class="collapsible-header  waves-effect waves-blue">ログアウト</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
     </header>
 	
     <main id="idMain">
@@ -35,7 +127,6 @@
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script>if (!window.jQuery) { document.write('<script src="bin/jquery-2.1.1.min.js"><\/script>'); }
     </script>
-    <script src="js/jquery.timeago.min.js"></script> 
 	<script src="js/vendor/moment-with-locales.js"></script>
     <script src="bin/materialize.js"></script>
     <script src="js/init.js"></script>
@@ -43,22 +134,101 @@
        
 	<script>
 		var width = 0;
-	
-		
+						
 		$(document).ready(function() {
-			$("main").load( "screen04.html", function( response, status, xhr) {
-				loadCollapsible();
+			var _screenName = getUrlParameter('scr');
+			var _tabName = getUrlParameter('tab');
+		
+			
+			$('[id^=menuRoom]').click(function(event) {
+				var id = jQuery(this).attr("id")
 				
-				init();
+				if (id == 'menuRoom') return;
+							
+				$('.page-title').text('部屋情報');
+				
+				//$('.mdi-navigation-menu').trigger('click');
+												
+				switch (id) {
+					case 'menuRoomHotel':
+						loadPage("screen04", "hotel");
+						break;
+					case 'menuRoomPantry':
+						loadPage("screen04", "pantry");
+						break;
+					case 'menuRoomRoom':
+						loadPage("screen04", "room");
+						break;
+					case 'menuRoomDetail':
+						loadPage("screen04", "detail");
+						break;
+					default:
+						loadPage("screen04", "hotel");
+				}
+				$('.button-collapse').sideNav('hide');
+				
 			});
 			
+			$("[id^=menuSearch]").click(function(event) {
+				var id = jQuery(this).attr("id")
 			
+				if (event.target.id == 'menuSearch') return;
+				
+				$('.page-title').text('ピーク時間情報');
+				
+				switch (id) {
+					case 'menuSearchA':
+						loadPage("screen08", "a");
+						break;
+					case 'menuSearchKa':
+						loadPage("screen08", "ka");
+						break;
+					case 'menuSearchSa':
+						loadPage("screen08", "sa");
+						break;
+					case 'menuSearchTa':
+						loadPage("screen08", "ta");
+						break;
+					case 'menuSearchNa':
+						loadPage("screen08", "na");
+						break;
+					case 'menuSearchHa':
+						loadPage("screen08", "ha");
+						break;
+					case 'menuSearchMa':
+						loadPage("screen08", "ma");
+						break;
+					case 'menuSearchYa':
+						loadPage("screen08", "ya");
+						break;
+					case 'menuSearchRa':
+						loadPage("screen08", "ra");
+						break;
+					case 'menuSearchWa':
+						loadPage("screen08", "wa");
+						break;
+					default:
+						getHighLightMenu('menuRoom', 'hotel');
+				}
+				
+				$('.button-collapse').sideNav('hide');
+			});
+			
+			/*
+			$("[id^=menuPeak]").click(function(event) {
+				if (event.target.id == 'menuPeak') return;
+				
+				$('.page-title').text('インジケータ');
+				
+				loadPage("screen14", "hotel");
+			});
+			*/
+			
+			
+			loadPage(_screenName, _tabName);
+						
 		});
 		
-		function hello() {
-			alert("Hung");
-		}
- 
 	</script>
   </body>
 </html>

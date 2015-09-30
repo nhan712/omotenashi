@@ -1,27 +1,33 @@
 /*Custom JS*/
 var width = 0;
 
-$("header").load( "header.html", function( response, status, xhr ) {
-	if ( status != "error" ) {
-		var url = window.location.href; 
-		if (url.indexOf('screen04') != -1) {
-			$('.page-title').text('部屋情報');
-			getHighLightMenu('menuRoom');
+var currentUrl = "";
+var currentTab = "";
+var currentMenu = "";
+
+function loadPage(url, tabName) {
+	//if (currentUrl != url) {
+	$("main").load(url + ".html", function(response, status, xhr) {
+		loadCollapsible();
+		
+		init();
+				
+		switch (url) {
+			case 'screen04':
+				getHighLightMenu("menuRoom", tabName);
+				break;
+			case 'screen08':
+				getHighLightMenu('menuSearch', tabName);
+				break;
+			default:
+				break;
 		}
-		if (url.indexOf('screen08') != -1) {
-			$('.page-title').text('宿泊客検索');
-			getHighLightMenu('menuSearch');
-		}
-		if (url.indexOf('screen14') != -1) {
-			$('.page-title').text('ピーク時間情報');
-			getHighLightMenu('menuPeak');
-		}
-		if (url.indexOf('screen15') != -1) {
-			$('.page-title').text('インジケータ');
-			getHighLightMenu('menuIndicator');
-		}
-	}
-});
+		
+		currentUrl = url;
+		currentTab = tabName;
+	});
+	//}
+}
 
 function responsiveFn() {
 	width = $(window).width();
@@ -35,15 +41,18 @@ function loadCollapsible() {
 	});
 }
 
-function getHighLightMenu(_menuName) {
-	/*Common*/
-	var _tabName = getUrlParameter('tab');
-	$('#'+_tabName+'Div').trigger('click');
-	// if (_screenName == 'screen04') {
-	// 	$('#'+_tabName+'Div').trigger('click'); 
-	// }
-	$('#'+_menuName + _tabName.charAt(0).toUpperCase() + _tabName.slice(1)).addClass("active");
-	$('#'+_menuName).trigger('click'); 
+function getHighLightMenu(_menuName, tabName) {
+	// var _tabName = getUrlParameter('tab');
+	
+	$('#' + tabName + 'Div').trigger('click');
+	$('#' + _menuName + currentTab.charAt(0).toUpperCase() + currentTab.slice(1)).removeClass("active");
+	$('#' + _menuName + tabName.charAt(0).toUpperCase() + tabName.slice(1)).addClass("active");
+	
+	if (currentUrl == "") {
+		$('#'+_menuName).trigger('click');
+	}
+	
+	//currentMenu = _menuName
 }
 
 function getUrlParameter(sParam) {
