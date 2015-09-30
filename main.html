@@ -26,7 +26,7 @@
 		<!-- Using the header.html file at here -->
 		<nav class="top-nav">
 			<div class="container">
-				<div class="nav-wrapper"><a class="page-title">部屋情報</a></div>
+				<div class="nav-wrapper"><a class="page-title"></a></div>
 			</div>
 		</nav>
 
@@ -91,10 +91,10 @@
 						<a class="collapsible-header  waves-effect waves-blue" id="menuPeak">ピーク時間情報</a>
 						<div class="collapsible-body">
 							<ul>
-								<li id="menuPeakIn"><div class="collapsible-header"><i class="material-icons">call_received</i>IN</div></li>
-								<li id="menuPeakNoon"><div class="collapsible-header"><i class="material-icons">call_received</i>夕食</div></li>
-								<li id="menuPeakMoring"><div class="collapsible-header"><i class="material-icons">call_received</i>朝食</div></li>
-								<li id="menuPeakOut"><div class="collapsible-header"><i class="material-icons">call_made</i>OUT</div></li>
+								<li id="menuPeakIn"><div class="collapsible-header"><i class="material-icons">call_received</i><a>IN</a></div></li>
+								<li id="menuPeakNoon"><div class="collapsible-header"><i class="material-icons">call_received</i><a>夕食</a></div></li>
+								<li id="menuPeakMorning"><div class="collapsible-header"><i class="material-icons">call_received</i><a>朝食</a></div></li>
+								<li id="menuPeakOut"><div class="collapsible-header"><i class="material-icons">call_made</i><a>OUT</a></div></li>
 							</ul>
 						</div>
 					</li>
@@ -138,16 +138,11 @@
 		$(document).ready(function() {
 			var _screenName = getUrlParameter('scr');
 			var _tabName = getUrlParameter('tab');
-		
-			
+					
 			$('[id^=menuRoom]').click(function(event) {
 				var id = jQuery(this).attr("id")
 				
 				if (id == 'menuRoom') return;
-							
-				$('.page-title').text('部屋情報');
-				
-				//$('.mdi-navigation-menu').trigger('click');
 												
 				switch (id) {
 					case 'menuRoomHotel':
@@ -165,17 +160,14 @@
 					default:
 						loadPage("screen04", "hotel");
 				}
-				$('.button-collapse').sideNav('hide');
-				
+								
 			});
 			
 			$("[id^=menuSearch]").click(function(event) {
 				var id = jQuery(this).attr("id")
 			
 				if (event.target.id == 'menuSearch') return;
-				
-				$('.page-title').text('ピーク時間情報');
-				
+												
 				switch (id) {
 					case 'menuSearchA':
 						loadPage("screen08", "a");
@@ -210,23 +202,32 @@
 					default:
 						getHighLightMenu('menuRoom', 'hotel');
 				}
-				
-				$('.button-collapse').sideNav('hide');
 			});
 			
-			/*
-			$("[id^=menuPeak]").click(function(event) {
-				if (event.target.id == 'menuPeak') return;
+			$('[id^=menuPeak]').click(function(event) {
+				var id = jQuery(this).attr("id")
 				
-				$('.page-title').text('インジケータ');
-				
-				loadPage("screen14", "hotel");
+				if (id == 'menuPeak') return;
+																				
+				switch (id) {
+					case 'menuPeakIn':
+						loadPage("screen14", "in");
+						break;
+					case 'menuPeakNoon':
+						loadPage("screen14", "noon");
+						break;
+					case 'menuPeakMorning':
+						loadPage("screen14", "morning");
+						break;
+					case 'menuPeakOut':
+						loadPage("screen14", "out");
+						break;
+					default:
+						loadPage("screen14", "in");
+				}
 			});
-			*/
-			
-			
-			loadPage(_screenName, _tabName);
 						
+			loadPage(_screenName, _tabName);
 		});
 		
 	</script>

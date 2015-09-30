@@ -10,15 +10,22 @@ function loadPage(url, tabName) {
 	$("main").load(url + ".html", function(response, status, xhr) {
 		loadCollapsible();
 		
+		$('.button-collapse').sideNav('hide');
+		
 		init();
 				
 		switch (url) {
 			case 'screen04':
+				$('.page-title').text('部屋情報');
 				getHighLightMenu("menuRoom", tabName);
 				break;
 			case 'screen08':
+				$('.page-title').text('宿泊客検索');
 				getHighLightMenu('menuSearch', tabName);
 				break;
+			case 'screen14':
+				$('.page-title').text('ピーク時間情報');
+				getHighLightMenu('menuPeak', tabName);
 			default:
 				break;
 		}
