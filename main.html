@@ -104,9 +104,9 @@
 						<a class="collapsible-header  waves-effect waves-blue" id="menuIndicator">インジケータ</a>
 						<div class="collapsible-body">
 							<ul>
-								<li id="menuIndicatorHotel?tab=hotel"><a>棟</a></li>
-								<li id="menuIndicatorPantry?tab=pantry"><a>ﾊﾟﾝﾄﾘｰ</a></li>
-								<li id="menuIndicatorRoom?tab=room"><a>部屋</a></li>
+								<li id="menuIndicatorHotel"><div class="collapsible-header"><a>棟</a></div></li>
+								<li id="menuIndicatorPantry"><div class="collapsible-header"><a>ﾊﾟﾝﾄﾘｰ</a></div></li>
+								<li id="menuIndicatorRoom"><div class="collapsible-header"><a>部屋</a></div></li>
 							</ul>
 						</div>
 					</li>
@@ -234,13 +234,13 @@
 				if (id == 'menuIndicator') return;
 																				
 				switch (id) {
-					case 'menuIndicator':
+					case 'menuIndicatorHotel':
 						loadPage("screen15", "hotel");
 						break;
-					case 'menuIndicator':
+					case 'menuIndicatorPantry':
 						loadPage("screen15", "pantry");
 						break;
-					case 'menuIndicator':
+					case 'menuIndicatorRoom':
 						loadPage("screen15", "room");
 						break;
 					default:
