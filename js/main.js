@@ -18,8 +18,16 @@ $("header").load( "header.html", function( response, status, xhr ) {
 			$('.page-title').text('インジケータ');
 			getHighLightMenu('menuIndicator');
 		}
+		
+		
 	}
 });
+
+function loadCollapsible() {
+	$('.collapsible').collapsible({
+		accordion : true // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+	});
+}
 
 function getHighLightMenu(_menuName) {
 	/*Common*/
