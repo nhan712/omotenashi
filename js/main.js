@@ -28,10 +28,12 @@ function loadPage(url, tabName) {
 			case 'screen14':
 				$('.page-title').text('ピーク時間情報');
 				getHighLightMenu('menuPeak', tabName);
+				break;
 				
 			case 'screen15':
 				$('.page-title').text('インジケータ');
 				getHighLightMenu('menuIndicator', tabName);
+				break;
 				
 			default:
 				break;
@@ -59,6 +61,8 @@ function getHighLightMenu(_menuName, tabName) {
 	// var _tabName = getUrlParameter('tab');
 	
 	$('#' + tabName + 'Div').trigger('click');
+	
+	//alert("currentMenu = " + currentMenu + ", currentTab = " + currentTab);
 	
 	$('#' + currentMenu + currentTab.charAt(0).toUpperCase() + currentTab.slice(1)).removeClass("active");
 	
