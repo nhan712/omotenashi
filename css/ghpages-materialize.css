@@ -6055,7 +6055,7 @@ a.waves-effect .waves-ripple {
       width: 80%; } }
 	@media only screen and (max-width : 700px) {
 		.modal {
-			max-height: 80%; 
+			max-height: 85%; 
 		} 
 	}
   .modal h1, .modal h2, .modal h3, .modal h4 {
