@@ -81,6 +81,13 @@ function loadCollapsible() {
 	});
 }
 
+function scrollToPos(obj) {
+	if ($(obj).hasClass('active')) {
+		var position = $(obj).offset().top;
+		$('html, body').animate({scrollTop : position}, "slow");
+	}
+}
+
 function getHighLightMenu(_menuName, tabName) {
 	// var _tabName = getUrlParameter('tab');
 	

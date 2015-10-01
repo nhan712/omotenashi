@@ -4,7 +4,7 @@
             </p>
             
             <ul class="collapsible collapsible-accordion" data-collapsible="accordion">
-                <li>
+                <li onclick="scrollToPos(this);">
                     <div class="collapsible-header" id="hotelDiv">
                         <i class="material-icons">business</i>棟
                     </div>
@@ -90,7 +90,7 @@
                     </div>
                 </li>
 
-                <li>
+                <li onclick="scrollToPos(this);">
                     <div class="collapsible-header" id="pantryDiv">
                         <i class="material-icons">dns</i>ﾊﾟﾝﾄﾘｰ
                     </div>
@@ -330,7 +330,7 @@
                     </div>
                 </li>
               
-                <li>
+                <li onclick="scrollToPos(this);">
                     <div class="collapsible-header" id="roomDiv"><i class="material-icons">store</i>部屋</div>
                     <div class="collapsible-body">
                         <table id="roomTable" class="bordered highlight multiTable"> 
@@ -542,8 +542,6 @@
                         </table>
                     </div>
                 </li>
-              
-                
             </ul>
         </div>
    
