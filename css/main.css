@@ -23,7 +23,7 @@ p:hover, p:focus {
 .picker__frame {
   top: 0 !important;
 }
-.date-text, .hotel-text, .customer-text {font-size: 14px; margin: 0}
+.date-text, .hotel-text, .customer-text {font-size: 14px; /*margin: 0*/}
 @media only screen and (max-width: 900px) {
   .date-text, .hotel-text, .customer-text {font-size: 13px;} }
 @media only screen and (max-width: 667px) {
