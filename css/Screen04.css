@@ -115,3 +115,7 @@ td.eclipsis {
 	overflow: hidden; 
 	white-space: nowrap;
 }
+
+li a {
+	font-size : 16px;
+}
