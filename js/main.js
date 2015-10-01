@@ -24,21 +24,29 @@ function loadPage(url, tabName) {
 			case 'screen04':
 				$('.page-title').text('部屋情報');
 				getHighLightMenu("menuRoom", tabName);
+				$('#Room-' + tabName + '-Div').trigger('click');
+				
 				break;
 				
 			case 'screen08':
 				$('.page-title').text('宿泊客検索');
 				getHighLightMenu('menuSearch', tabName);
+				$('#Search-' + tabName + '-Div').trigger('click');
+				
 				break;
 				
 			case 'screen14':
 				$('.page-title').text('ピーク時間情報');
 				getHighLightMenu('menuPeak', tabName);
+				$('#Peak-' + tabName + '-Div').trigger('click');
+				
 				break;
 				
 			case 'screen15':
 				$('.page-title').text('インジケータ');
 				getHighLightMenu('menuIndicator', tabName);
+				$('#Indicator-' + tabName + '-Div').trigger('click');
+				
 				break;
 				
 			default:
@@ -46,7 +54,11 @@ function loadPage(url, tabName) {
 		}
 		currentUrl = url;
 		currentTab = tabName;
-		$('#' + tabName + 'Div').trigger('click');
+		
+		var arr = ($(obj).attr('id')).split('-');
+		alert(arr);
+		
+		
 	});
 	
 }
