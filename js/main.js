@@ -44,9 +44,9 @@ function loadPage(url, tabName) {
 			default:
 				break;
 		}
-		
 		currentUrl = url;
 		currentTab = tabName;
+		$('#' + tabName + 'Div').trigger('click');
 	});
 	
 }
@@ -85,13 +85,18 @@ function scrollToPos(obj) {
 	if ($(obj).hasClass('active')) {
 		var position = $(obj).offset().top;
 		$('html, body').animate({scrollTop : position}, "slow");
+		var _menuName = 'menu' + ($(obj).attr('id')).split('-')[1];
+		var _tabName = ($(obj).attr('id')).split('-')[2];
+
+		getHighLightMenu(_menuName, _tabName);
+		currentTab = _tabName;
 	}
 }
 
 function getHighLightMenu(_menuName, tabName) {
 	// var _tabName = getUrlParameter('tab');
 	
-	$('#' + tabName + 'Div').trigger('click');
+	//$('#' + tabName + 'Div').trigger('click');
 	
 	$('#' + currentMenu + currentTab.charAt(0).toUpperCase() + currentTab.slice(1)).removeClass("active");
 	
