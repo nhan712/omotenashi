@@ -7074,7 +7074,7 @@ select {
       left: auto; } }
 
 .side-nav .collapsible-body li.active, .side-nav.fixed .collapsible-body li.active {
-  /*background-color: #ee6e73;*/ background-color: #6D6DE6}
+  /*background-color: #ee6e73;*/ background-color: #1e88e5;}
   .side-nav .collapsible-body li.active a, .side-nav.fixed .collapsible-body li.active a {
     color: #fff; }
 
