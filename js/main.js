@@ -34,10 +34,12 @@ function loadPage(url, tabName) {
 			case 'screen14':
 				$('.page-title').text('ピーク時間情報');
 				getHighLightMenu('menuPeak', tabName);
+				break;
 				
 			case 'screen15':
 				$('.page-title').text('インジケータ');
 				getHighLightMenu('menuIndicator', tabName);
+				break;
 				
 			default:
 				break;
