@@ -2,7 +2,7 @@
 	<div class="row">
 		<div id="introduction" class="section scrollspy">
 			<ul class="collapsible collapsible-accordion" data-collapsible="accordion">
-				<li>
+				<li onclick="scrollToPos(this);">
 					<div class="collapsible-header" id="aDiv" style="font-weight: bold;">
 						あ
 					</div>
@@ -161,7 +161,7 @@
 					</div>
 				</li>
 
-				<li>
+				<li onclick="scrollToPos(this);">
 					<div class="collapsible-header" id="kaDiv" style="font-weight: bold;">
 						か
 					</div>
@@ -320,7 +320,7 @@
 					</div>
 				</li>
 				
-				<li>
+				<li onclick="scrollToPos(this);">
 					<div class="collapsible-header" id="saDiv" style="font-weight: bold;">
 						さ
 					</div>
@@ -479,7 +479,7 @@
 					</div>
 				</li>
 				
-				<li>
+				<li onclick="scrollToPos(this);">
 					<div class="collapsible-header" id="taDiv" style="font-weight: bold;">
 						た
 					</div>
@@ -638,7 +638,7 @@
 					</div>
 				</li>
 				
-				<li>
+				<li onclick="scrollToPos(this);">
 					<div class="collapsible-header" id="naDiv" style="font-weight: bold;">
 						な
 					</div>
@@ -797,7 +797,7 @@
 					</div>
 				</li>
 				
-				<li>
+				<li onclick="scrollToPos(this);">
 					<div class="collapsible-header" id="haDiv" style="font-weight: bold;">
 						は
 					</div>
@@ -956,7 +956,7 @@
 					</div>
 				</li>
 				
-				<li>
+				<li onclick="scrollToPos(this);">
 					<div class="collapsible-header" id="maDiv" style="font-weight: bold;">
 						ま
 					</div>
@@ -1115,7 +1115,7 @@
 					</div>
 				</li>
 				
-				<li>
+				<li onclick="scrollToPos(this);">
 					<div class="collapsible-header" id="yaDiv" style="font-weight: bold;">
 						や
 					</div>
@@ -1274,7 +1274,7 @@
 					</div>
 				</li>
 				
-				<li>
+				<li onclick="scrollToPos(this);">
 					<div class="collapsible-header" id="raDiv" style="font-weight: bold;">
 						ら
 					</div>
@@ -1433,7 +1433,7 @@
 					</div>
 				</li>
 				
-				<li>
+				<li onclick="scrollToPos(this);">
 					<div class="collapsible-header" id="waDiv" style="font-weight: bold;">
 						わ
 					</div>
@@ -1607,6 +1607,12 @@
 </div>
 
 <script>
+	function scrollToPos(obj) {
+		if($(obj).hasClass('active')) {
+			var position = $(obj).offset().top;
+			$('html, body').animate({scrollTop: position}, "slow");
+		}
+	}
 	function init() {
 		responsiveFn();
 			
