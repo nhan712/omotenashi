@@ -23,7 +23,7 @@ p:hover, p:focus {
 .picker__frame {
   top: 0 !important;
 }
-.date-text, .hotel-text, .customer-text {font-size: 14px;}
+.date-text, .hotel-text, .customer-text {font-size: 14px; margin: 0}
 @media only screen and (max-width: 900px) {
   .date-text, .hotel-text, .customer-text {font-size: 13px;} }
 @media only screen and (max-width: 667px) {
@@ -46,4 +46,13 @@ span.badge-default {
   font-size: 0.9rem;
   color: #fff;
   background-color: #26a69a;
+}
+#fixed-top-nav {
+  position: fixed;
+  top: 0;
+  z-index: 99;
+}
+#idMain {
+  position: relative;
+  top: 60px;
 }

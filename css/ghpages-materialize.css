@@ -5255,7 +5255,7 @@ nav {
   color: #fff;
   background-color: #42A5F5;
   width: 100%;
-  height: 56px;
+  /*height: 56px;*/
   line-height: 56px; }
   nav a {
     color: #fff; }
@@ -8287,7 +8287,7 @@ ul.side-nav.fixed {
 <!-- modified 20150928 -->
 nav.top-nav {
   height: 52px;
-  box-shadow: none; }
+  box-shadow: none;}
   nav.top-nav a.page-title {
     line-height: 56px;
     /*line-height: 62px;*/
