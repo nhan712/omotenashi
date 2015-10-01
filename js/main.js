@@ -6,13 +6,19 @@ var currentTab = "";
 var currentMenu = "";
 
 function loadPage(url, tabName) {
-	//if (currentUrl != url) {
+
 	$("main").load(url + ".html", function(response, status, xhr) {
 		loadCollapsible();
 		
 		$('.button-collapse').sideNav('hide');
 		
 		init();
+
+		resizeAngleRight();
+
+        $(window).resize(function() {
+            resizeAngleRight();
+        });
 				
 		switch (url) {
 			case 'screen04':
@@ -28,12 +34,10 @@ function loadPage(url, tabName) {
 			case 'screen14':
 				$('.page-title').text('ピーク時間情報');
 				getHighLightMenu('menuPeak', tabName);
-				break;
 				
 			case 'screen15':
 				$('.page-title').text('インジケータ');
 				getHighLightMenu('menuIndicator', tabName);
-				break;
 				
 			default:
 				break;
@@ -42,8 +46,26 @@ function loadPage(url, tabName) {
 		currentUrl = url;
 		currentTab = tabName;
 	});
-	//}
+	
 }
+
+function resizeAngleRight() {
+    if(this.innerWidth > 667) {
+        $('.fa').addClass('fa-3x')
+        $('.fa').removeClass('fa-2x')
+        $('.fa').removeClass('fa-lg')
+    } else {
+        if(this.innerWidth > 568) {
+            $('.fa').addClass('fa-2x')
+            $('.fa').removeClass('fa-3x')
+        } else {
+            $('.fa').removeClass('fa-2x')
+            $('.fa').removeClass('fa-3x')
+            $('.fa').addClass('fa-lg')
+        }
+    }
+}
+
 
 function responsiveFn() {
 	width = $(window).width();
@@ -61,8 +83,6 @@ function getHighLightMenu(_menuName, tabName) {
 	// var _tabName = getUrlParameter('tab');
 	
 	$('#' + tabName + 'Div').trigger('click');
-	
-	//alert("currentMenu = " + currentMenu + ", currentTab = " + currentTab);
 	
 	$('#' + currentMenu + currentTab.charAt(0).toUpperCase() + currentTab.slice(1)).removeClass("active");
 	

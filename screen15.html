@@ -552,29 +552,6 @@
     
         function init() {
             
-            resizeAngleRight();
-
-            $(window).resize(function() {
-                resizeAngleRight();
-            });
-
-            function resizeAngleRight() {
-                if(this.innerWidth > 667) {
-                    $('.fa').addClass('fa-3x')
-                    $('.fa').removeClass('fa-2x')
-                    $('.fa').removeClass('fa-lg')
-                } else {
-                    if(this.innerWidth > 568) {
-                        $('.fa').addClass('fa-2x')
-                        $('.fa').removeClass('fa-3x')
-                    } else {
-                        $('.fa').removeClass('fa-2x')
-                        $('.fa').removeClass('fa-3x')
-                        $('.fa').addClass('fa-lg')
-                    }
-                }
-            }
-
             moment.locale('ja');
             var ymd = moment().format('ll');
             var day = "（" + moment().format('dd') + "）";
