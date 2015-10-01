@@ -6053,6 +6053,11 @@ a.waves-effect .waves-ripple {
   @media only screen and (max-width : 992px) {
     .modal {
       width: 80%; } }
+	@media only screen and (max-width : 700px) {
+		.modal {
+			max-height: 80%; 
+		} 
+	}
   .modal h1, .modal h2, .modal h3, .modal h4 {
     margin-top: 0; }
   .modal .modal-content {
@@ -8322,7 +8327,6 @@ a.button-collapse.top-nav {
 
 #front-page-logo {
   display: inline-block;
-  width: 100%;
   height: 100%;
   pointer-events: none; }
 
