@@ -154,3 +154,10 @@ function getUrlParameter(sParam) {
 		}
 	}
 };
+
+function getJpnDateString() {
+	moment.locale('ja');
+	var ymd = moment().format('ll');
+	var day = "（" + moment().format('dd') + "）";
+	return ymd + day;
+}

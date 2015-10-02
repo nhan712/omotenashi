@@ -418,7 +418,7 @@
 			moment.locale('ja');
 			var ymd = moment().format('ll');
 			var day = "（" + moment().format('dd') + "）";
-			$(".date-text").text(ymd + day);
+			$(".date-text").text(getJpnDateString);
 			
 			$('#hotelTable tr').click(function() {
 				$('#pantryDiv').trigger('click'); 

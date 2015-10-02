@@ -1,6 +1,9 @@
 <div class="container">
 	<div class="row">
 		<div id="introduction" class="section scrollspy">
+			<p class="date-text">11111111
+			</p>
+		
 			<ul class="collapsible collapsible-accordion" data-collapsible="accordion">
 				<li>
 					<div class="collapsible-header" id="Search-a-Div" style="font-weight: bold;" onclick="scrollToPos(this);">
@@ -1609,6 +1612,8 @@
 
 <script>
 	function init() {
+		$(".date-text").text(getJpnDateString());
+	
 		responsiveFn();
 			
 		if (width >= 450) {
