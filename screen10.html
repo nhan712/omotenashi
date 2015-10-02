@@ -29,9 +29,9 @@
                 <span class="customer-text">山田 12階</span>
                 <p>
                     <a class="waves-effect waves-light blue lighten-1 btn btn-large btn-block modal-trigger" href="#modal1">配達センター</a>
-                    <a class="waves-effect waves-light blue lighten-1 btn btn-large btn-block" href="#modal1">調理事務所</a>
-                    <a class="waves-effect waves-light blue lighten-1 btn btn-large btn-block" href="#modal1">用度事務所</a>
-                    <a class="waves-effect waves-light blue lighten-1 btn btn-large btn-block" href="#modal1">用度翌日出庫依頼</a>
+                    <a class="waves-effect waves-light blue lighten-1 btn btn-large btn-block modal-trigger" href="#modal1">調理事務所</a>
+                    <a class="waves-effect waves-light blue lighten-1 btn btn-large btn-block modal-trigger" href="#modal1">用度事務所</a>
+                    <a class="waves-effect waves-light blue lighten-1 btn btn-large btn-block modal-trigger" href="#modal1">用度翌日出庫依頼</a>
                 </p>
             </div>
             <div class="col s1 m3 l3"></div>
@@ -74,6 +74,7 @@
             $('.modal-trigger').leanModal();
             $('.modal-action').click(function() {
 				window.open('http://www.kagaya.co.jp/rooms/', '_blank');
+				$('#modal1').closeModal();
             });
         });
         var getUrlParameter = function getUrlParameter(sParam) {
