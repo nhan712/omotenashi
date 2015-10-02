@@ -98,7 +98,7 @@ function scrollToPos(obj) {
 	setTimeout(
 		function() {
 			var headerHeight = $("#fixed-top-nav").height();
-				var position = $(obj).offset().top - headerHeight;
+				var position = $(obj).offset().top - headerHeight - 2;
 				$('html, body').animate({scrollTop : position}, "slow");
 				var _menuName = 'menu' + ($(obj).attr('id')).split('-')[0];
 				var _tabName = ($(obj).attr('id')).split('-')[1];
