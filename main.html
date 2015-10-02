@@ -87,10 +87,10 @@
 					<li class="bold"><a class="collapsible-header  waves-effect waves-blue">手配登録</a>
 						<div class="collapsible-body">
 							<ul>
-								<li><a href="http://www.kagaya.co.jp/rooms/" target="_blank">配達センター</a></li>
-								<li><a href="http://www.kagaya.co.jp/rooms/" target="_blank">調理事務所</a></li>
-								<li><a href="http://www.kagaya.co.jp/rooms/" target="_blank">用度事務所</a></li>
-								<li><a href="http://www.kagaya.co.jp/rooms/" target="_blank">用度翌日</a></li>
+								<li><a class="waves-effect waves-light modal-trigger" href="#modal1">配達センター</a></li>
+								<li><a class="waves-effect waves-light modal-trigger" href="#modal1">調理事務所</a></li>
+								<li><a class="waves-effect waves-light modal-trigger" href="#modal1">用度事務所</a></li>
+								<li><a class="waves-effect waves-light modal-trigger" href="#modal1">用度翌日</a></li>
 							</ul>
 						</div>
 					</li>
@@ -129,7 +129,31 @@
     <main id="idMain">
 		<!-- load pages -->
 		
-	</main>    
+	</main>
+
+	<!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="staff-id" type="text" class="validate">
+                        <label for="staff-id">Staff ID</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="password" type="password" class="validate">
+                        <label for="password">Password</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action waves-effect waves-blue btn-flat">Login</a>
+            <a href="#!" class="modal-close waves-effect waves-blue btn-flat">Cancel</a>
+        </div>
+    </div>
 	
     <!--  Scripts-->
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -144,6 +168,20 @@
 		var width = 0;
 						
 		$(document).ready(function() {
+			$("#scr10_direct").click(function() {
+				var url = "screen10.html?dhd=" + $('.date-text').text();
+				location.href = url;
+			});
+			
+			$('.modal-action').click(function() {
+				setTimeout(function() {
+					window.open('http://www.kagaya.co.jp/rooms/', '_blank');
+				}, 0);
+				
+				$('#modal1').closeModal();
+				$('.button-collapse').sideNav('hide');
+            });
+		
 			var _screenName = getUrlParameter('scr');
 			var _tabName = getUrlParameter('tab');
 					
