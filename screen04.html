@@ -415,23 +415,20 @@
 		
 	<script>
 		function init() {
-			moment.locale('ja');
-			var ymd = moment().format('ll');
-			var day = "（" + moment().format('dd') + "）";
-			$(".date-text").text(getJpnDateString);
+			$(".date-text").text(getJpnDateString());
 			
 			$('#hotelTable tr').click(function() {
-				$('#pantryDiv').trigger('click'); 
+				$('#Room-pantry-Div').trigger('click'); 
 				return;				
 			});
 			
 			$('#pantryTable tbody table tr').click(function() {
-				$('#roomDiv').trigger('click');
+				$('#Room-room-Div').trigger('click');
 				return;
 			});
 			
 			$('#roomTable > tbody > tr').click(function() {
-				$('#detailDiv').trigger('click');   
+				$('#Room-detail-Div').trigger('click');   
 				return;
 			});
 			
