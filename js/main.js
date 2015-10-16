@@ -9,7 +9,6 @@ function loadPage(url, tabName) {
 
 	$("main").load(url + ".html", function(response, status, xhr) {
 		loadCollapsible();
-		
 		$('.button-collapse').sideNav('hide');
 		
 		init();
@@ -19,13 +18,12 @@ function loadPage(url, tabName) {
         $(window).resize(function() {
             resizeAngleRight();
         });
-				
 		switch (url) {
 			case 'screen04':
 				$('.page-title').text('部屋情報');
-				getHighLightMenu("menuRoom", tabName);
-				$('#Room-' + tabName + '-Div').trigger('click');
-				
+				//getHighLightMenu("menuRoom", tabName);
+				$('ul.tabs').tabs('select_tab', tabName);
+				//$('#Room-' + tabName + '-Div').trigger('click');
 				break;
 				
 			case 'screen08':
@@ -105,9 +103,8 @@ function scrollToPos(obj) {
 
 function getHighLightMenu(_menuName, tabName) {
 	// var _tabName = getUrlParameter('tab');
-	
 	//$('#' + tabName + 'Div').trigger('click');
-	
+
 	$('#' + currentMenu + currentTab.charAt(0).toUpperCase() + currentTab.slice(1)).removeClass("active");
 	
 	$('#' + _menuName + tabName.charAt(0).toUpperCase() + tabName.slice(1)).addClass("active");
@@ -115,8 +112,12 @@ function getHighLightMenu(_menuName, tabName) {
 	if (currentUrl == "") {
 		$('#'+_menuName).trigger('click');
 	}
-	
+	if (currentTab != tabName) {
+		currentTab = tabName;
+	}
 	currentMenu = _menuName
+
+
 }
 
 function getUrlParameter(sParam) {

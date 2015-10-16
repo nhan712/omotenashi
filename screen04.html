@@ -4,13 +4,13 @@
 			</p>
 			
 			<ul class="tabs">
-		        <li class="tab col s3"><a href="#test1">棟</a></li>
-		        <li class="tab col s3"><a href="#test2">ﾊﾟﾝﾄﾘｰ</a></li>
-		        <li class="tab col s3"><a href="#test3">部屋</a></li>
-		        <li class="tab col s3"><a href="#test4">詳細</a></li>
+		        <li class="tab col s3" onclick="getHighLightMenu('menuRoom', 'hotel');"><a href="#hotel">棟</a></li>
+		        <li class="tab col s3" onclick="getHighLightMenu('menuRoom', 'pantry');"><a href="#pantry">ﾊﾟﾝﾄﾘｰ</a></li>
+		        <li class="tab col s3" onclick="getHighLightMenu('menuRoom', 'room');"><a href="#room">部屋</a></li>
+		        <li class="tab col s3" onclick="getHighLightMenu('menuRoom', 'detail');"><a href="#detail">詳細</a></li>
 		    </ul>
 
-		    <div id="test1" class="col s12">
+		    <div id="hotel" class="col s12">
 		    	<table id="hotelTable" class="bordered highlight">
 		    		<thead>
 		    			<tr class="light-blue lighten-4">
@@ -23,7 +23,7 @@
 		    			</tr>
 		    		</thead>
 
-		    		<tbody onclick="openTab('test2')">
+		    		<tbody onclick="openTab('pantry')">
 		    			<tr>
 		    				<td style="width:24%">加賀屋</td>
 		    				<td style="width:18%">者亭</td>
@@ -90,7 +90,7 @@
 		    	</table>
 		    </div>
 
-		    <div id="test2" class="col s12">
+		    <div id="pantry" class="col s12">
 		    	<table id="pantryTable" class="bordered highlight multiTable"> 
 		    		<thead>
 		    			<tr class="light-blue lighten-4">
@@ -102,7 +102,7 @@
 		    			</tr>
 		    		</thead>
 
-		    		<tbody onclick="openTab('test3')">
+		    		<tbody onclick="openTab('room')">
 		    			<tr>
 		    				<td colspan="4">
 		    					<table>
@@ -232,7 +232,7 @@
 		    	</table>
 		    </div>
 
-		    <div id="test3" class="col s12">
+		    <div id="room" class="col s12">
 		    	<table id="roomTable" class="bordered highlight multiTable"> 
 		    		<thead>
 		    			<tr class="light-blue lighten-4">
@@ -245,7 +245,7 @@
 		    			</tr>
 		    		</thead>
 
-		    		<tbody onclick="openTab('test4')">
+		    		<tbody onclick="openTab('detail')">
 		    			<tr>
 		    				<td colspan="5">
 		    					<table>
@@ -385,8 +385,8 @@
 		    	</table>
 		    </div>
 
-		    <div id="test4" class="col s12">
-		    	<p id="detail">
+		    <div id="detail" class="col s12">
+		    	<p id="text-detail">
 		    	</p>
 		    	<div align="center" style="margin-top:-20px; margin-bottom:15px">
 		    		<a class='waves-effect waves-light blue lighten-1 btn btn-block'>登録</a>
@@ -399,46 +399,48 @@
     		$('ul.tabs').tabs();
   		});
   		function openTab(tab_id) {
-			$('ul.tabs').tabs('select_tab', tab_id);
+			// $('ul.tabs').tabs('select_tab', tab_id);
+			// getHighLightMenu('menuRoom', tab_id);
+			loadPage("screen04", tab_id);
 		}
 		function init() {
 			$(".date-text").text(getJpnDateString());
 			
-			$('#hotelTable tr').click(function() {
-				$('#Room-pantry-Div').trigger('click'); 
-				return;				
-			});
+			// $('#hotelTable tr').click(function() {
+			// 	$('#Room-pantry-Div').trigger('click'); 
+			// 	return;				
+			// });
 			
-			$('#pantryTable tbody table tr').click(function() {
-				$('#Room-room-Div').trigger('click');
-				return;
-			});
+			// $('#pantryTable tbody table tr').click(function() {
+			// 	$('#Room-room-Div').trigger('click');
+			// 	return;
+			// });
 			
-			$('#roomTable > tbody > tr').click(function() {
-				$('#Room-detail-Div').trigger('click');   
-				return;
-			});
+			// $('#roomTable > tbody > tr').click(function() {
+			// 	$('#Room-detail-Div').trigger('click');   
+			// 	return;
+			// });
 			
 			responsiveFn();
 			
 			if (width >= 450) {
-				$("#detail").append("1208&nbsp;&nbsp;&nbsp;&nbsp;《東京》&nbsp;&nbsp;&nbsp;&nbsp;田中一郎　様&nbsp;&nbsp;&nbsp;&nbsp;2/6 名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;大人2名<br>");
-				$("#detail").append("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IN:17:00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;夕:19:30&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;朝:8:00&nbsp;&nbsp;&nbsp;&nbsp;OUT:10:00<br><br>");
+				$("#text-detail").append("1208&nbsp;&nbsp;&nbsp;&nbsp;《東京》&nbsp;&nbsp;&nbsp;&nbsp;田中一郎　様&nbsp;&nbsp;&nbsp;&nbsp;2/6 名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;大人2名<br>");
+				$("#text-detail").append("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IN:17:00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;夕:19:30&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;朝:8:00&nbsp;&nbsp;&nbsp;&nbsp;OUT:10:00<br><br>");
 			} else {
-				$("#detail").append("1201&nbsp;《東京》&nbsp田中一郎　様&nbsp;&nbsp;2/6 名&nbsp;&nbsp;&nbsp;大人2名<br>");
-				$("#detail").append("&nbsp;&nbsp;&nbsp;IN:17:00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp夕:19:30&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;朝:8:00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OUT:10:00<br><br>");
+				$("#text-detail").append("1201&nbsp;《東京》&nbsp田中一郎　様&nbsp;&nbsp;2/6 名&nbsp;&nbsp;&nbsp;大人2名<br>");
+				$("#text-detail").append("&nbsp;&nbsp;&nbsp;IN:17:00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp夕:19:30&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;朝:8:00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OUT:10:00<br><br>");
 			}
 			
-			$("#detail").append("【手配】<br>");
-			$("#detail").append("別料理&nbsp;&nbsp;&nbsp;&nbsp;舟盛り&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;サービス<br>");
-			$("#detail").append("ビール&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;アサヒ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;銘柄指定<br>");
-			$("#detail").append("料理注意<br><br>");
-			$("#detail").append("【注意】<br>");
-			$("#detail").append("昨年も来館<br>");
-			$("#detail").append("前泊&nbsp;&nbsp;金沢全日空ホテル<br>");
-			$("#detail").append("支配人挨拶<br><br>");
-			$("#detail").append("【指示追加】<br>");
-			$("#detail").append("<textarea id='textarea1' rows='4'>");
+			$("#text-detail").append("【手配】<br>");
+			$("#text-detail").append("別料理&nbsp;&nbsp;&nbsp;&nbsp;舟盛り&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;サービス<br>");
+			$("#text-detail").append("ビール&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;アサヒ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;銘柄指定<br>");
+			$("#text-detail").append("料理注意<br><br>");
+			$("#text-detail").append("【注意】<br>");
+			$("#text-detail").append("昨年も来館<br>");
+			$("#text-detail").append("前泊&nbsp;&nbsp;金沢全日空ホテル<br>");
+			$("#text-detail").append("支配人挨拶<br><br>");
+			$("#text-detail").append("【指示追加】<br>");
+			$("#text-detail").append("<textarea id='textarea1' rows='4'>");
 		}
 	</script>
 

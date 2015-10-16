@@ -137,14 +137,12 @@
             <form class="col s12">
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="staff-id" type="text" class="validate">
-                        <label for="staff-id">Staff ID</label>
+                        <input id="staff-id" type="text" class="validate" placeholder="Staff ID">
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="password" type="password" class="validate">
-                        <label for="password">Password</label>
+                        <input id="password" type="password" class="validate" placeholder="Password">
                     </div>
                 </div>
             </form>
@@ -187,20 +185,26 @@
 					
 			$('[id^=menuRoom]').click(function(event) {
 				var id = jQuery(this).attr("id")
-				
-				if (id == 'menuRoom') return;
-												
+				if (id == 'menuRoom') return;							
 				switch (id) {
 					case 'menuRoomHotel':
+						//$('ul.tabs').tabs('select_tab', 'hotel');
+						//getHighLightMenu('menuRoom', 'hotel');
 						loadPage("screen04", "hotel");
 						break;
 					case 'menuRoomPantry':
+						// $('ul.tabs').tabs('select_tab', 'pantry');
+						// getHighLightMenu('menuRoom', 'pantry');
 						loadPage("screen04", "pantry");
 						break;
 					case 'menuRoomRoom':
+						// $('ul.tabs').tabs('select_tab', 'room');
+						// getHighLightMenu('menuRoom', 'room');
 						loadPage("screen04", "room");
 						break;
 					case 'menuRoomDetail':
+						// $('ul.tabs').tabs('select_tab', 'detail');
+						// getHighLightMenu('menuRoom', 'detail');
 						loadPage("screen04", "detail");
 						break;
 					default:
