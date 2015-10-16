@@ -1,58 +1,64 @@
 <!doctype html>
 <html class="no-js" lang="">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title></title>
+    <title>e-omotenashi</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!-- Loading Material UI -->
+	<link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
     <link href="css/materialize.css" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/index.css">
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-  </head>
-  <body class="login-background">
-    <div class="container">
-      <!-- <div class="col-md-4"></div> -->
-      <!-- <div class="col-md-4"> -->
-        <br>
-        <br>
-        <div class="row">
-          <div class="col l3 s1"></div>
-          <div class="col l6 s10">
-          <form class="login">
-            <p class="title">Log in</p>
-            <div class="row">
-              <div class="input-field col s12">
-                <input id="staff-id" type="text" placeholder="Staff ID" >
-                <!-- <label for="staff-id" style="font-weight: normal;">Staff ID</label> -->
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <input id="password" type="password" readonly="readonly">
-                <label for="password" style="font-weight: normal;">Password</label>
-              </div>
-            </div>
-            <p id="staff-name" class="center-align"></p>
-            <div class="login-btn">
-              <a class="waves-effect waves-light btn blue lighten-1">OK</a>
-            </div>
-            <!-- <div style="position: absolute; right: 15px; bottom: 40px; cursor: pointer;"> -->
-            <p class="date-text"></p>
-            <div id="datepicker"></div>
-            <!-- </div> -->
-          </form>
-          </div>
-          <div class="col l3 s1"></div>
+</head>
+	<body class="login-background">
+		<div class="container">
+			<!-- <div class="col-md-4"></div> -->
+			<!-- <div class="col-md-4"> -->
+			<br>
+			<br>
+			
+			<div class="row">
+				<div class="col l3 s1"></div>
+				<div class="col l6 s10">
+          
+				<form class="login">
+					<p class="title">Log in</p>
+					<div class="row">
+						<div class="input-field col s12">
+							<input id="staff-id" type="text" placeholder="Staff ID">
+						</div>
+					</div>
+            
+					<div class="row">
+						<div class="input-field col s12">
+							<input id="password" type="password" readonly="readonly" placeholder="Password">
+						</div>
+					</div>
+            
+					<p id="staff-name" class="center-align"></p>
+					<div class="login-btn">
+						<a class="waves-effect waves-light btn blue lighten-1">OK</a>
+					</div>
+					
+					<!-- <div style="position: absolute; right: 15px; bottom: 40px; cursor: pointer;"> -->
+					<p class="date-text"></p>
+					<div id="datepicker"></div>
+					<!-- </div> -->
+				</form>
+			</div>
+          
+			<div class="col l3 s1"></div>
         </div>
         
-      </div>
-      <!-- <div class="col-md-4"></div> -->
     </div>
-    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
+    <!-- <div class="col-md-4"></div> -->
+    </div>
+    
+	<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script> -->
     <script src="js/vendor/jquery-1.11.2.js"></script>
     <script src="js/vendor/moment-with-locales.js"></script>
@@ -60,58 +66,64 @@
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
     <script type="text/javascript">
-      moment.locale('ja');
-      var ymd = moment().format('ll');
-      var day = "（"+moment().format('dd')+"）";
-      $(".date-text").text(ymd+day);
-      $('#staff-id') .focusout(function () {
-        if ($('#staff-id').val() == '123') {
-          $('#staff-name').text('nhanvc');
-          $('#password').attr('readonly', false);
-        } else {
-          $('#staff-name').text('');
-          $('#password').attr('readonly', true);
-        }
-      });
-      var $input = $('#datepicker').pickadate({
-        monthsFull: [ '1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月' ],
-        monthsShort: [ '1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月' ],
-        weekdaysFull: [ '日曜日', '月曜日', '火曜日', '水曜日', '木曜日', '金曜日', '土曜日' ],
-        weekdaysShort: [ '日', '月', '火', '水', '木', '金', '土' ],
-        weekdaysLetter: [ '日', '月', '火', '水', '木', '金', '土' ],
-        today: '今日',
-        clear: '消去',
-        close: '閉じ',
-        firstDay: 1,
-        format: 'yyyy/mm/dd',
-        formatSubmit: 'yyyy/mm/dd',
-      });
-      var picker = $input.data('pickadate');
-      $('.date-text').click( function( e ) {
-          // stop the click from bubbling
-          e.stopPropagation();
-          // prevent the default click action
-          e.preventDefault();
-          // open the date picker
-          picker.open();
-      });
-      $(document).on('click', function() {
-        picker.close()
-      });
-      picker.on('close', function(){
-        var val = picker.get();
-        if (val != "") {
-          var ymd = moment(val).format('ll');
-          var day = "（"+moment(val).format('dd')+"）";
-          $(".date-text").text(ymd+day);
-        }
-      });
-      $('.btn').click(function() {
-        var url = "screen03.html?dhd=" + $('.date-text').text();
-        location.href = url
-      })
+		moment.locale('ja');
+		var ymd = moment().format('ll');
+		var day = "（"+moment().format('dd')+"）";
+		$(".date-text").text(ymd+day);
+		
+		$('#staff-id') .focusout(function () {
+			if ($('#staff-id').val() == '123') {
+				$('#staff-name').text('nhanvc');
+				$('#password').attr('readonly', false);
+			} else {
+				$('#staff-name').text('');
+				$('#password').attr('readonly', true);
+			}
+		});
+      
+		var $input = $('#datepicker').pickadate({
+			monthsFull: [ '1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月' ],
+			monthsShort: [ '1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月' ],
+			weekdaysFull: [ '日曜日', '月曜日', '火曜日', '水曜日', '木曜日', '金曜日', '土曜日' ],
+			weekdaysShort: [ '日', '月', '火', '水', '木', '金', '土' ],
+			weekdaysLetter: [ '日', '月', '火', '水', '木', '金', '土' ],
+			today: '今日',
+			clear: '消去',
+			close: '閉じ',
+			firstDay: 1,
+			format: 'yyyy/mm/dd',
+			formatSubmit: 'yyyy/mm/dd',
+		});
+		
+		var picker = $input.data('pickadate');
+		$('.date-text').click( function( e ) {
+			// stop the click from bubbling
+			e.stopPropagation();
+			// prevent the default click action
+			e.preventDefault();
+			// open the date picker
+			picker.open();
+		});
+		
+		$(document).on('click', function() {
+			picker.close()
+		});
+		
+		picker.on('close', function(){
+			var val = picker.get();
+			if (val != "") {
+				var ymd = moment(val).format('ll');
+				var day = "（"+moment(val).format('dd')+"）";
+				$(".date-text").text(ymd+day);
+			}
+		});
+		
+		$('.btn').click(function() {
+			var url = "screen03.html?dhd=" + $('.date-text').text();
+			location.href = url
+		})
     </script>
-  </body>
+</body>
 
 
 </html>

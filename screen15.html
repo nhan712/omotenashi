@@ -4,8 +4,8 @@
             </p>
             
             <ul class="collapsible collapsible-accordion" data-collapsible="accordion">
-                <li id="li-Indicator-hotel" onclick="scrollToPos(this);">
-                    <div class="collapsible-header" id="hotelDiv">
+                <li>
+                    <div class="collapsible-header" id="Indicator-hotel-Div" onclick="scrollToPos(this);">
                         <i class="material-icons">business</i>棟
                     </div>
                     
@@ -90,8 +90,8 @@
                     </div>
                 </li>
 
-                <li id="li-Indicator-pantry" onclick="scrollToPos(this);">
-                    <div class="collapsible-header" id="pantryDiv">
+                <li id="li-Indicator-pantry">
+                    <div class="collapsible-header" id="Indicator-pantry-Div" onclick="scrollToPos(this);">
                         <i class="material-icons">dns</i>ﾊﾟﾝﾄﾘｰ
                     </div>
                     
@@ -330,8 +330,11 @@
                     </div>
                 </li>
               
-                <li id="li-Indicator-room" onclick="scrollToPos(this);">
-                    <div class="collapsible-header" id="roomDiv"><i class="material-icons">store</i>部屋</div>
+                <li id="li-Indicator-room">
+                    <div class="collapsible-header" id="Indicator-room-Div" onclick="scrollToPos(this);">
+						<i class="material-icons">store</i>部屋
+					</div>
+					
                     <div class="collapsible-body">
                         <table id="roomTable" class="bordered highlight multiTable"> 
                             <thead>
@@ -548,11 +551,8 @@
 	<script>
     
         function init() {
-            
-            moment.locale('ja');
-            var ymd = moment().format('ll');
-            var day = "（" + moment().format('dd') + "）";
-            $(".date-text").text(ymd + day);
+           
+            $(".date-text").text(getJpnDateString());
         
         };
         

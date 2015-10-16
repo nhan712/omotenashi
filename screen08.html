@@ -1,6 +1,9 @@
 <div class="container">
 	<div class="row">
 		<div id="introduction" class="section scrollspy">
+			<p class="date-text">11111111
+			</p>
+		
 			<ul class="collapsible collapsible-accordion" data-collapsible="accordion">
 				<li>
 					<div class="collapsible-header" id="Search-a-Div" style="font-weight: bold;" onclick="scrollToPos(this);">
@@ -1597,10 +1600,11 @@
 
 <!-- Modal Structure -->
 <div id="detailModal" class="modal">
-    <div class="modal-content col s12">
+    <div class="modal-content">
 		<p id="detail">
 		</p>
-		<div align="center" style="margin-top:10px; margin-bottom:0px">
+		
+		<div align="center" style="margin-bottom:-5px">
 			<a class='modal-action modal-close waves-effect waves-light blue lighten-1 btn btn-block'>登録</a>
 		</div>
     </div>
@@ -1608,6 +1612,8 @@
 
 <script>
 	function init() {
+		$(".date-text").text(getJpnDateString());
+	
 		responsiveFn();
 			
 		if (width >= 450) {
