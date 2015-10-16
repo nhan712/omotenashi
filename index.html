@@ -72,7 +72,7 @@
 		$(".date-text").text(ymd+day);
 		
 		$('#staff-id') .focusout(function () {
-			if ($('#staff-id').val() == '123') {
+			if ($('#staff-id').val() !== '') {
 				$('#staff-name').text('nhanvc');
 				$('#password').attr('readonly', false);
 			} else {
