@@ -112,12 +112,13 @@ function getHighLightMenu(_menuName, tabName) {
 	if (currentUrl == "") {
 		$('#'+_menuName).trigger('click');
 	}
+	if (currentTab != "") {
+		$( '.' + currentTab ).children().css('color', '#1e88e5');
+	}
 	if (currentTab != tabName) {
 		currentTab = tabName;
 	}
-	currentMenu = _menuName
-
-
+	currentMenu = _menuName;
 }
 
 function getUrlParameter(sParam) {

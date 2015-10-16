@@ -4,10 +4,10 @@
 			</p>
 			
 			<ul class="tabs z-depth-1">
-		        <li class="tab col s3" onclick="getHighLightMenu('menuRoom', 'hotel');"><a href="#hotel">棟</a></li>
-		        <li class="tab col s3" onclick="getHighLightMenu('menuRoom', 'pantry');"><a href="#pantry">ﾊﾟﾝﾄﾘｰ</a></li>
-		        <li class="tab col s3" onclick="getHighLightMenu('menuRoom', 'room');"><a href="#room">部屋</a></li>
-		        <li class="tab col s3" onclick="getHighLightMenu('menuRoom', 'detail');"><a href="#detail">詳細</a></li>
+		        <li class="tab col s3 hotel" onclick="setHighlight('hotel');"><a href="#hotel">棟</a></li>
+		        <li class="tab col s3 pantry" onclick="setHighlight('pantry');"><a href="#pantry">ﾊﾟﾝﾄﾘｰ</a></li>
+		        <li class="tab col s3 room" onclick="setHighlight('room');"><a href="#room">部屋</a></li>
+		        <li class="tab col s3 detail" onclick="setHighlight('detail');"><a href="#detail">詳細</a></li>
 		    </ul>
 
 		    <div id="hotel" class="col s12">
@@ -402,6 +402,10 @@
 			// $('ul.tabs').tabs('select_tab', tab_id);
 			// getHighLightMenu('menuRoom', tab_id);
 			loadPage("screen04", tab_id);
+		}
+		function setHighlight(tab_id) {
+			getHighLightMenu('menuRoom', tab_id);
+			$( '.' + tab_id ).children().css('color', 'white');
 		}
 		function init() {
 			$(".date-text").text(getJpnDateString());

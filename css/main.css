@@ -60,7 +60,7 @@ span.badge-default {
   background-color: transparent !important; 
 }
 .tabs .tab a {
-  color: #bdbdbd !important;
+  /*color: #bdbdbd !important;*/
   font-weight: bold;
 }
 .tabs .indicator {
