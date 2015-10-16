@@ -1,7 +1,7 @@
 /*! HTML5 Custom CSS */
 input:focus {
-  border-bottom: 1px solid #42A5F5 !important;
-  box-shadow: 0 1px 0 0 #42A5F5 !important;
+  /*border-bottom: none !important;
+  box-shadow: 0 1px 0 0 #9e9e9e !important;*/
 }
 input:focus + label {
   color: #42A5F5 !important;
@@ -55,4 +55,23 @@ span.badge-default {
 #idMain {
   position: relative;
   top: 60px;
+}
+.tabs {
+  background-color: transparent !important; 
+}
+.tabs .tab a {
+  color: #bdbdbd !important;
+  font-weight: bold;
+}
+.tabs .indicator {
+  background-color: #1e88e5 !important; 
+  height: inherit !important;
+  z-index: -1;
+}
+input[type=text], input[type=password] {
+  border: 1px solid #9e9e9e;
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+  padding: 10px !important;
 }
